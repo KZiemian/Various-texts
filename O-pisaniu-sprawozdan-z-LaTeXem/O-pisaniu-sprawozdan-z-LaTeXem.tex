@@ -704,7 +704,7 @@ z~taką niepewnością.
   \end{equation}
   zawiera wartość prawdziwą z~prawdopodobieństwem około 95.5\%.
 
-  Wszystkie wartości wyżej wielkości procentowe wynikają z~własności
+  Wszystkie wyżej wymienione wielkości procentowe wynikają z~własności
   rozkładu Gaussa\footnote{Tutaj parę rzeczy opisaliśmy zbyt skrótowo.
     Może kiedyś napiszemy to lepiej.} (patrz:\label{sec:obliczenia}).
   Prawdopodobieństwo znalezienia w~przedziale wartości prawdziwej,
@@ -771,16 +771,16 @@ z~taką niepewnością.
   \end{quote}
   Jednak już
   \begin{quote}
-    \verb+\LaTeX to~potężne narzędzie.+
+    \texttt{\tbs LaTeX to~potężne narzędzie.}
   \end{quote}
   daje
   \begin{quote}
     \LaTeX to~potężne narzędzie.
   \end{quote}
   Aby uniknąć tego typu problemów należy komendy po~których ma~być
-  odstęp kończyć \verb+{}+. Przykładowo
+  odstęp kończyć \texttt{\{\}}. Przykładowo
   \begin{displayquote}
-    \verb+\LaTeX{} to~potężne narzędzie.+
+    \texttt{\tbs LaTeX\{\} to~potężne narzędzie.}
   \end{displayquote}
   wyświetli tekst
   \begin{displayquote}
@@ -847,8 +847,8 @@ z~taką niepewnością.
 \item Oznaczenia zmiennych i parametrów w tekście powinny być pisane
   kursywą. W tym celu najlepiej użyć trybu matematycznego.
   Na~przykład, by~oznaczyć trzecią oś~układu współrzędnych należy
-  wpisać ,,\verb+$z$+''~nie~,,\verb+z+'', tak by~otrzymać~,,$z$''~nie
-  zaś~,,z''.
+  wpisać ,,\texttt{\$z\$}''~nie~,,\texttt{z}'', tak
+  by~otrzymać~,,$z$''~nie zaś~,,z''.
 \item Funkcje matematyczne powinny być pisane czcionką drukowaną,
   np.~powinno być ,,$\sin$'' nie zaś ,,$sin$''. Dla większości funkcji
   wystarczy wpisać ,,\texttt{\tbs nazwa\_funkcji}'',
@@ -860,11 +860,11 @@ z~taką niepewnością.
   %   tg\}\{\textbackslash mathrm\{tg\}\}
 \item Komendy ,,\texttt{\tbs left}'' i~,,\texttt{\tbs right}'' dają
   nawiasy dopasowujące~się do~rozmiarów wyrażenia które zawierają. Dla
-  przykładu:~,,\verb+$( \frac{ G M }{ r } )$+
-  vs~\verb+$\left( \frac{ G M }{ r } \right)$+'' daje
-  ,,$( \frac{ G M }{ r } )$ vs~$\left( \frac{ G M }{ r } \right)$''.
-  Możliwe jest też mieszanie typów nawiasów lewych i~prawych:
-  $\left( \frac{ G M }{ r } \right]$.
+  przykładu:~,,\texttt{\$( \tbs frac\{ G M \}\{ r \} )\$}
+  vs~\texttt{\$\tbs left( \tbs frac\{ G M \}\{ r \} \tbs right)\$}''
+  daje ,,$( \frac{ G M }{ r } )$
+  vs~$\left( \frac{ G M }{ r } \right)$''. Możliwe jest też mieszanie
+  typów nawiasów lewych i~prawych: $\left( \frac{ G M }{ r } \right]$.
 
   \textbf{Uwaga.} Jeżeli wpiszemy ,,\texttt{\tbs left(}'' lecz nie
   ,,\texttt{\tbs right)}'', \LaTeX{} uzna to za błąd i~nie
@@ -873,13 +873,14 @@ z~taką niepewnością.
   (odpowiednio ,,\texttt{\tbs right.}'').
 \item \LaTeX{} sam zarządza odstępami w~trybie matematyczny, co czasem
   może prowadzić do~mało estetycznego zapisu. Na przykład napisanie
-  ,,\verb+$a b$+'' daje ,,$a b$'', zaś ,,\verb+$a, b$+''
+  ,,\texttt{\$a b\$}'' daje ,,$a b$'', zaś ,,\texttt{\$a, b\$}''
   do~,,$a, b$''. Jeśli chce~się wstawić w~trybie matematycznym odstęp
   można~się posłużyć komendami \texttt{\tbs ,}, \texttt{\tbs ;},
   \texttt{\tbs :}, \texttt{\tbs quad} i~\texttt{\tbs qquad}.
 
-  Tym sposobem ,,\verb+$a\, b$+'' daje ,,$a\, b$'',
-  zaś~,,\verb+$a\, b\: c\; d$+'' prowadzi do~,,$a\, b\: c\; d$''.
+  Tym sposobem ,,\texttt{\$a\, b\$}'' daje ,,$a\, b$'',
+  zaś~,,\texttt{\$a\tbs , b\tbs : c\tbs ; d\$}'' prowadzi
+  do~,,$a\, b\: c\; d$''.
 \item Obecnie standardem w~pracy z~trybem matematycznym \LaTeX a jest
   używanie pakietów od~American Mathematical Society, takich jak
   \texttt{amsmath}, \texttt{amsfonts}, \texttt{amssymb},
@@ -894,8 +895,8 @@ z~taką niepewnością.
   ich formatowanie nie jest spójne z~tym pakietem. Otoczenie
   \texttt{eqnarray} należy zastąpić przez \texttt{align},
   zaś~\texttt{eqnarray*} przez \texttt{align*}.
-  Natomiast~\texttt{displaymath} można zastąpić \texttt{\tbs [...\tbs ]}
-  lub~\texttt{equation*}\footnote{Tego ostatniego autorzy nie~są
+  Natomiast~\texttt{displaymath} można zastąpić \texttt{\tbs [...\tbs
+    ]} lub~\texttt{equation*}\footnote{Tego ostatniego autorzy nie~są
     do~końca pewni, ale~jest wygodne w~praktyce.}.
 \end{enumerate}
 
@@ -936,10 +937,10 @@ czy~ta funkcja działa poprawnie.
 \item Podstawową komendą pakietu jest \texttt{\tbs si\{...\}}.
   Przykładowo
   \begin{quote}
-    \verb+\si{ kg }+ $\to \si{kg}$, \\
-    \verb+\frac{ \si{ kg } }{ \si{ m^{ 3 } } }+
+    \texttt{\tbs si\{ kg \}} $\to \si{kg}$, \\
+    \texttt{\tbs frac\{ \tbs si\{ kg \} \}\{ \tbs si\{ m\^{}\{ 3 \} \} \}}
     $\to \frac{ \si{ kg } }{ \si{ m^{ 3 } } }$, \\
-    \verb+\si{ m / s^{ 2 } }+ $\to \si{ m / s^{ 2 } }$.
+    \texttt{\tbs si\{ m / s\^{}\{ 2 \} \}} $\to \si{ m / s^{ 2 } }$.
   \end{quote}
 \item Nazwy różnych jednostek fizycznych powinny być oddzielone
   spacją, np. powinno być ,,$\si{kg.m}$'', a~nie
