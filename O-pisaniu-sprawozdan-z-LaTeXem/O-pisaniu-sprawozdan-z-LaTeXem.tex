@@ -831,8 +831,8 @@ z~taką niepewnością.
       Figures and~Captions}}), ale~zazwyczaj prowadzi to~do~kiepskiego
   rozkładu tekstu. Nie należy~się bać tego, że~obrazek ląduje
   niedokładnie w~miejscu gdzie jest opisany w tekście, należy tylko
-  dodać odpowiednie referencje tam gdzie~się do~niego odwołujemy
-  \toadd{Czy trzeba ten fragment rozbudować?}.
+  dodać odpowiednie referencje tam gdzie~się do~niego odwołujemy.
+  \toadd{Czy trzeba ten fragment rozbudować?}
 \end{enumerate}
 
 
@@ -937,10 +937,10 @@ czy~ta funkcja działa poprawnie.
 \item Podstawową komendą pakietu jest \texttt{\tbs si\{...\}}.
   Przykładowo
   \begin{quote}
-    \texttt{\tbs si\{ kg \}} $\to \si{kg}$, \\
+    \texttt{\tbs si\{ kg \}} $\longrightarrow \si{kg}$, \\
     \texttt{\tbs frac\{ \tbs si\{ kg \} \}\{ \tbs si\{ m\^{}\{ 3 \} \} \}}
-    $\to \frac{ \si{ kg } }{ \si{ m^{ 3 } } }$, \\
-    \texttt{\tbs si\{ m / s\^{}\{ 2 \} \}} $\to \si{ m / s^{ 2 } }$.
+    $\longrightarrow \frac{ \si{ kg } }{ \si{ m^{ 3 } } }$, \\
+    \texttt{\tbs si\{ m / s\^{}\{ 2 \} \}} $\longrightarrow \si{ m / s^{ 2 } }$.
   \end{quote}
 \item Nazwy różnych jednostek fizycznych powinny być oddzielone
   spacją, np. powinno być ,,$\si{kg.m}$'', a~nie
@@ -948,14 +948,14 @@ czy~ta funkcja działa poprawnie.
     si\{...\}} można to osiągnąć wstawiając w~odpowiednim
   miejscu~kropkę. Ilustruje to poniższy przykłady
   \begin{quote}
-    \texttt{\tbs si\{ kg.m \}} $\to \si{kg.m}$.
+    \texttt{\tbs si\{ kg.m \}} $\longrightarrow \si{kg.m}$.
   \end{quote}
 \item Tak samo między wartością liczbową, a~jednostką powinien być
   odstęp. Czyli powinno być ,,$700 \si{.m}$'', zamiast
   ,,$700 \si{m}$''. Można to znów prosto uzyskać kropką w~odpowiednim
   miejscu
   \begin{quote}
-    \texttt{700 \tbs si\{ .m \}} $\to 700 \si{ .m }$.
+    \texttt{700 \tbs si\{ .m \}} $\longrightarrow 700 \si{ .m }$.
   \end{quote}
 \end{enumerate}
 
@@ -1084,9 +1084,7 @@ standardami stronę \emph{\TeX{} Users Group},
   trybu matematycznego) daje ,,\powt{3}''. Bardziej skomplikowany
   przykład~to:
   \begin{quote}
-    \texttt{\tbs newcommand\{\tbs pd\}}\verb+[3]+
-    \texttt{\{ \tbs frac\{ \tbs partial\^{}\{ \#1 \}\{ \#2 \} \}} \\
-    \texttt{\{ \tbs partial \{ \#3 \}\^{}\{ \#1 \} \} \}}
+    \texttt{\tbs newcommand\{\tbs pd\}}\verb+[3]+\texttt{\{ \tbs frac\{ \tbs partial\^{}\{ \#1 \}\{ \#2 \} \}}\texttt{\{ \tbs partial \{ \#3 \}\^{}\{ \#1 \}\}\}}
   \end{quote}
   Wpisanie teraz w~trybie matematycznym\footnote{Proszę zauważyć,
     że~w~definicji komendy nie~użyliśmy znaku \$.} \texttt{\tbs pd\{ 2
@@ -1203,10 +1201,13 @@ standardami stronę \emph{\TeX{} Users Group},
       Metody Opracowania Pomiarów~I}}.
 \item Siegmund Brandt, \emph{Metody statyczne i~obliczeniowe analizy
     danych}. \\
-  Książka stanowi całkiem dobre rozszerzenie wiadomości zawartych
-  w~poprzednich pracach.
+  Książka napisana często zbyt zwięźle, zawiera sporo relatywnie
+  prostych wyprowadzeń wielu wzorów i~zależności, jako taką można ją
+  polecić jako relatywnie prosty wykład podstaw statystyki. Albo jeśli
+  potrzebujesz na~szybko coś znaleźć.
 \item Jarosław Bartoszewicz, \emph{Wykłady ze~statystyki matematycznej}. \\
-  Pozycja już zaawansowana, raczej nie pomoże znaleźć 
+  Pozycja już zaawansowana, otwierając ją bądź gotów na~to, że~jej
+  studiowanie zajmie trochę czasu.
 \item \emph{Popularne
     błędy typograficzne, czyli jak unikać byków}. \\
   Adres:
