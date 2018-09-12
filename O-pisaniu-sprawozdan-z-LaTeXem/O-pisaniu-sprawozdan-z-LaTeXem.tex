@@ -192,8 +192,9 @@
 \item[--] Tekst nie tylko można, ale należy przekazywać dalej, każdemu
   komu może~się on~przydać.
 \item[--] W~tekście tym na~pewno~są obecne błędy, będziemy wdzięczni
-  za~przesyłanie ich na~adres~mailowy~\tb{kziemianfvt@gmail.com}. Można też
-  nanieść poprawki samemu w~egzemplarzu pliku dostępnego na~GitHubie
+  za~przesyłanie ich na~adres~mailowy~\tb{kziemianfvt@gmail.com}.
+  Można też nanieść poprawki samemu w~egzemplarzu pliku dostępnego
+  na~GitHubie
   i~utworzyć Pull requesta \\
   \href{https://github.com/KZiemian/Various-texts/tree/master/O-pisaniu-sprawozdan-z-LaTeXem}{https://github.com/KZiemian/Various-texts/tree/master/O-pisaniu-sprawozdan-z-LaTeXem}.
 \item[--] Wszelkie propozycje zmiany bądź poprawy obecnej wersji można
@@ -219,12 +220,14 @@
 \item[--] Staraliśmy~się żeby tekst ten był możliwie poprawny
   merytorycznie oraz~by przedstawiał obecnie obowiązujące konwencje
   i~standardy. Dlatego staraliśmy~się konsultować te~tematy w~których
-  nasza wiedza nie jest wystarczając głęboka. Mimo tego pewne archaizmy
-  i~błędy mogły pozostać, prosimy więc używać niniejszych porad z~rozwagą.
+  nasza wiedza nie jest wystarczając głęboka. Mimo tego pewne
+  archaizmy i~błędy mogły pozostać, prosimy więc używać niniejszych
+  porad z~rozwagą.
 \item[--] Zdania uczonych~są podzielone w~wielu sprawach, wliczając
-  w~to standardy pisania sprawozdań i~konwencje. Stąd nawet jeśli jakiś punkt w~tym
-  tekście jest napisany zupełnie poprawne, w~zgodzie z~tym jak wiele
-  osób to~robi, ktoś może wymagać zupełnie innego podejścia do~sprawy.
+  w~to standardy pisania sprawozdań i~konwencje. Stąd nawet jeśli
+  jakiś punkt w~tym tekście jest napisany zupełnie poprawne, w~zgodzie
+  z~tym jak wiele osób to~robi, ktoś może wymagać zupełnie innego
+  podejścia do~sprawy.
 
   Jako przykład można wskazać dyskusję tego, jak należy podawać
   ostateczny wynik eksperymentu.
@@ -317,8 +320,7 @@
 \item Zwykle przyjmuje~się taki wybór jednostek albo sposób zapisu,
   by~odchylenie standardowe nie posiadało części całkowitej.
   Przykładowo odchylenie $1.2 \si{.cm}$ zapisalibyśmy np.~jako
-  $0.012 \si{.m}$, zaś~$2.4 \si{.kg}$ jako
-  $0.24 \times 10^{ 1 } \si{.kg}$.
+  $0.012 \si{.m}$, zaś~$2.4 \si{.kg}$ jako $0.24 \times 10 \si{.kg}$.
 \item Przyjęło~się, że jeśli drugą cyfrą znaczącą odchylenia
   standardowego jest zero to zapisujemy je, pomimo tego, że~nie jest
   to konieczne. Czyli odchylenie~0.2 należy zapisywać jako~0.20.
@@ -762,9 +764,9 @@ z~taką niepewnością.
   \href{https://texblog.org/2012/08/29/changing-the-font-size-in-latex/}{\emph{Changing
       the~font size in~LaTeX --~texblog}}.
 \item Polecenia \LaTeX a zaczynają się ukośnikiem wstecznym
-  (,,\texttt{\tbs}''), a~kończą spacją lub~pierwszym znakiem niebędącym
-  literą. \LaTeX{} nie traktuje~więc takiej spacji jako odstępu
-  w~tekście, lecz polecenie zakończenia komendy. Skutkiem tego
+  (,,\texttt{\tbs}''), a~kończą spacją lub~pierwszym znakiem
+  niebędącym literą. \LaTeX{} nie traktuje~więc takiej spacji jako
+  odstępu w~tekście, lecz polecenie zakończenia komendy. Skutkiem tego
   \begin{quote}
     \texttt{Używaj \tbs LaTeX a z~uwagą.}
   \end{quote}
@@ -941,9 +943,11 @@ czy~ta funkcja działa poprawnie.
   Przykładowo
   \begin{quote}
     \texttt{\tbs si\{ kg \}} $\longrightarrow \si{kg}$, \\
-    \texttt{\tbs frac\{ \tbs si\{ kg \} \}\{ \tbs si\{ m\^{}\{ 3 \} \} \}}
+    \texttt{\tbs frac\{ \tbs si\{ kg \} \}\{ \tbs si\{ m\^{}\{ 3 \} \}
+      \}}
     $\longrightarrow \frac{ \si{ kg } }{ \si{ m^{ 3 } } }$, \\
-    \texttt{\tbs si\{ m / s\^{}\{ 2 \} \}} $\longrightarrow \si{ m / s^{ 2 } }$.
+    \texttt{\tbs si\{ m / s\^{}\{ 2 \} \}}
+    $\longrightarrow \si{ m / s^{ 2 } }$.
   \end{quote}
 \item Nazwy różnych jednostek fizycznych powinny być oddzielone
   spacją, np. powinno być ,,$\si{kg.m}$'', a~nie
@@ -994,11 +998,12 @@ standardami stronę \emph{\TeX{} Users Group},
   definiować funkcji i~stałych wprowadzanych na~poziomie szkoły
   średniej bądź niżej). W~razie wątpliwości lepiej napisz co~oznaczają
   --~raczej nikt~się na~ciebie za~to nie obrazi.
-\item Każdy rysunek, wykres, tabela, etc., \textbf{musi być podpisany}.
+\item Każdy rysunek, wykres, tabela, etc., \textbf{musi być
+    podpisany}.
 \item Każdy wykres \tb{musi}\footnote{W~przeciwnym razie może ciebie
     spotkać coś \href{https://xkcd.com/833/}{takiego}.} mieć podpisane
-  \textbf{wszystkie osie}! Muszą też być podane \tb{jednostki} fizyczne
-  wielkości przedstawionych na~wykresie.
+  \textbf{wszystkie osie}! Muszą też być podane \tb{jednostki}
+  fizyczne wielkości przedstawionych na~wykresie.
 
   Przy podpisywaniu osi warto~się trzymać zasad opisanych w~części
   \eqref{sec:jednostki}.
@@ -1087,7 +1092,9 @@ standardami stronę \emph{\TeX{} Users Group},
   trybu matematycznego) daje ,,\powt{3}''. Bardziej skomplikowany
   przykład~to:
   \begin{quote}
-    \texttt{\tbs newcommand\{\tbs pd\}}\verb+[3]+\texttt{\{ \tbs frac\{ \tbs partial\^{}\{ \#1 \}\{ \#2 \} \}}\texttt{\{ \tbs partial \{ \#3 \}\^{}\{ \#1 \}\}\}}
+    \texttt{\tbs newcommand\{\tbs pd\}}\verb+[3]+\texttt{\{ \tbs
+      frac\{ \tbs partial\^{}\{ \#1 \}\{ \#2 \} \}}\texttt{\{ \tbs
+      partial \{ \#3 \}\^{}\{ \#1 \}\}\}}
   \end{quote}
   Wpisanie teraz w~trybie matematycznym\footnote{Proszę zauważyć,
     że~w~definicji komendy nie~użyliśmy znaku \$.} \texttt{\tbs pd\{ 2
