@@ -1,1 +1,1152 @@
-Jakoś trzeba zacząć.
+% Autor: Kamil Ziemian
+
+% --------------------------------------------------------------------
+% Podstawowe ustawienia Beamera i używane pakiety
+% --------------------------------------------------------------------
+\RequirePackage[l2tabu, orthodox]{nag} % Wykrywa przestarzałe i niewłaściwe
+% sposoby używania LaTeXa. Więcej jest w l2tabu English version.
+
+\documentclass{beamer}  % Klasa dokumentu
+\mode<presentation>  % Rodzaj prezentacji Beamera
+\usetheme{Warsaw}  % Temat graficzny
+
+\setbeamertemplate{headline}{}  % Usuwa nagłówek
+\setbeamersize{text margin left=3mm}  % Wielkość lewego marginesu
+\setbeamersize{text margin right=3mm}  % Wielkość prawego marginesu
+\setbeamertemplate{navigation symbols}{}  % Usuwa ikony nawigacji w prawym
+% dolnym rogu
+
+
+
+\usepackage[polish]{babel}  % Tłumaczy na polski teksty automatyczne LaTeXa
+% i pomaga z typografią.
+\usepackage[MeX]{polski}  % Polonizacja LaTeXa, bez niej będzie pracował
+% w języku angielskim.
+\usepackage[utf8]{inputenc}  % Włączenie kodowania UTF-8, co daje dostęp
+% do polskich znaków.
+\usepackage{lmodern}  % Wprowadza fonty Latin Modern.
+\usepackage[T1]{fontenc}  % Potrzebne do używania fontów Latin Modern.
+
+
+
+% ----------------------------
+% Pakiety napisane przez użytkownika.
+% Mają być w tym samym katalogu to ten plik .tex
+% ----------------------------
+\usepackage{latexshortcuts}
+
+
+
+% ----------------------------
+% Pakiet "hyperref"
+% Polecano by umieszczać go na końcu preambuły.
+% ----------------------------
+\usepackage{hyperref}  % Pozwala tworzyć hiperlinki i zamienia odwołania
+% do bibliografii na hiperlinki.
+
+
+
+
+
+% --------------------------------------------------------------------
+\title[Filozofia współczesna]{Filozofia współczesna}
+\subtitle{Czyli jak to się jawi amatorowi}
+
+\author{Kamil Ziemian \\
+  \texttt{kziemianfvt@gmail.com}}
+
+\institute{Uniwersytet Jagielloński, \\
+  Wydział Fizyki, Astronomii i Informatyki Stosowanej, \\
+  Kraków}
+
+% \date[28.05.2012]{28 maja 2012}
+% --------------------------------------------------------------------
+
+
+
+
+
+% ####################################################################
+% Początek dokumentu
+\begin{document}
+% ####################################################################
+
+
+
+% ######################################
+\begin{frame}
+  \titlepage
+\end{frame}
+% ######################################
+
+
+
+% ######################################
+\section[]{Wstęp i ostrzeżenia}
+% ######################################
+
+
+
+% ##########
+\begin{frame}
+  \frametitle{Wstęp i ostrzeżenia}
+
+  \begin{block}{O co w tym chodzi?}
+    Poopowiadać trochę o~filozofii współczesnej, aby~pomóc tym
+    co~chcących ją zgłębić i~poszukujących jakiegokolwiek punktu
+    startowego. Albo po~prostu o~niej posłuchać. \\
+    Co nie znaczy, że~to seminarium jest dobrym wyborem.
+  \end{block}
+
+  \begin{block}{Ostrzeżenia i uwagi:}
+    \begin{itemize}
+    \item[--] W~tej opowieści będzie wiele luk, zapewne też wiele
+      błędów.
+    \item[--] Filozofia z~okresu po~roku 2000 będzie w~ilościach
+      śladowych.
+    \item[--] Proszę również o~wybaczenie literówek, niepoprawnej
+      składni,~etc. Postaram~się w~przyszłości je poprawić.
+    \item[--] Proszę o~zgłoszenie wszystkich uwag, bowiem wierzę, że
+      dobrze jest uczyć się na błędach.
+    \end{itemize}
+  \end{block}
+
+\end{frame}
+% ##########
+
+
+
+% ##########
+\begin{frame}
+  \frametitle{Zarys planu}
+
+  \begin{block}{}
+    \begin{itemize}
+    \item[--] Pierwszy filozof od którego trzeba zacząć i~jego myśl.
+    \item[--] Jego naśladowcy i~ich krytycy.
+    \item[--] Rozłam dwudziestowieczny.
+    \item[--] Dwa giganci XX filozofii.
+    \item[--] Masa pominiętych myślicieli.
+    \end{itemize}
+  \end{block}
+
+\end{frame}
+% ##########
+
+
+
+
+
+% ######################################
+\section[]{Zacznijmy prawie od początku\ldots}
+% ######################################
+
+
+% ##########
+\begin{frame}
+  \frametitle{Zacznijmy prawie od początku\ldots}
+
+  \begin{block}{Złota zasada}
+    \begin{figure}
+      \centering \includegraphics[height=1.6in,
+      width=1.3in]{Plato_Aristotle.jpg} \uncover<2->{\caption{Platon
+          (427--347 BC), Arystoteles (384--322 BC)}}
+    \end{figure}
+  \end{block}
+
+  \begin{block}{}
+    O~czymkolwiek~się mówi w~filozofii, zawsze można zacząć od~tych
+    dwóch panów i~dojść logicznie do wybranego tematu.
+  \end{block}
+\end{frame}
+c% ##########
+
+
+
+% ##########
+\begin{frame}
+  \frametitle{Aż tyle czasu nie mamy}
+  \pause
+
+  \begin{block}{Filozof od którego trzeba zacząć}
+    \begin{figure}
+      \centering
+
+      \includegraphics[height=1.6in, width=1.4in]{Immanuel_Kant_1.jpg}
+      \caption{Immanuel Kant (1724--1804)}
+    \end{figure}
+  \end{block}
+
+  \begin{block}{W~mojej opinii}
+    \pause Najbardziej wpływowy filozof dwóch ostatnich wieków.
+  \end{block}
+
+\end{frame}
+% ##########
+
+
+
+% ##########
+\begin{frame}
+  \frametitle{Co warto wiedzieć o~Kancie\ldots}
+
+  \begin{block}{O~Luter, Kartezjuszu i~Rousseau.}
+    \textbf{Są~oni ojcami tego co Gabriel S\'{e}ailles nazwał
+      współczesnym sumieniem. Pomijam Immanuela Kanta, który stoi
+      na~skrzyżowaniu prądów duchowych, płynących od~tych trzech
+      ludzi. Filozof z~Królewca stworzył niejako scholastyczną
+      armaturę współczesnej myśli.} --~Jacques Maritain ,,Trzej
+    reformatorzy''.
+  \end{block}
+
+  \begin{block}{Życiorys Kanta}
+    \begin{itemize}
+    \item[--] Urodził się, żył i umarł w mieście K\"{o}nisberg
+      (Królewiec) w~Prusach.
+    \item[--] Był profesorem na~tamtejszym uniwersytecie.
+    \item[--] Tym samy jeden z~dwóch najważniejszych filozofów którzy
+      pomiędzy~XV, a~XX wiekiem parali~się tym zajęciem.
+    \item[--] Nigdy się nie ożenił.
+    \item[--] Legendarny pedant.
+    \item[--] Domator pierwszej kategorii.
+    \item[--] Główne prace: \\
+      Krytyka czystego rozumu 1781, \\
+      Krytyka praktycznego rozumu 1788, \\
+      Krytyka władzy sądzenia 1791.
+    \end{itemize}
+  \end{block}
+
+\end{frame}
+% ##########
+
+
+
+% ##########
+\begin{frame}
+  \frametitle{\ldots i jego filozofii?}
+
+  \begin{block}{Główne źródła myśli Kanta}
+    \begin{itemize}
+    \item[--] Pietystyczne wychowanie.
+    \item[--] Akademicka filozofia niemiecka.
+    \item[--] Polemika z Humem.
+    \item[--] Potrzeba pogodzenia nauki i~wiary. \\
+      Chodzi tu raczej o~fizykę Newtona niż biologię, to~jest osobna
+      historia.
+    \item[--] Filozofia oświecenia. Warty jest podkreślenia wpływ
+      Rousseau.
+    \item[--] Prawdopodobnie polemika z~filozofią scholastyczną (???).
+    \item[--] Emanuel Swedenborg?
+    \end{itemize}
+  \end{block}
+
+  \begin{block}{Ważne}
+    Można powiedzieć, że \emph{Krytyka czystego rozumu} jest wykładem
+    metafizyki, \emph{Krytyka praktycznego rozumu} etyki,
+    zaś~\emph{Krytyka władzy sądzenia} --~estetyki. Wszystkie te nurty
+    myśli Kanta są ważne, jednak tylko pierwszą będę w~stanie naprawdę
+    poruszyć.
+  \end{block}
+\end{frame}
+% ##########
+
+
+
+% ##########
+\begin{frame}
+  \frametitle{\ldots i jego filozofii?}
+
+  \begin{block}{Crashcourse filozofii Kanta}
+    \begin{itemize}
+      \pause
+    \item[--] Po pierwsze i najważniejsze: Kant był idealistą!
+    \item[--] Ale co to znaczy?
+    \item[--] Kantowska kategorie sądów: \\
+      a) analityczne, syntetyczne; \\
+      b) a priori (łac. z~tego, co~wcześniej), a posteriori
+      (łac.~z~tego, co~potem).
+    \item[--] Czas i przestrzeń, arytmetyka i~geometria.
+    \item[--] Ding an sich. Wielki niszczyciel.
+    \item[--] Koncepcja moralna: uniwersalizm.
+    \end{itemize}
+  \end{block}
+\end{frame}
+% ##########
+
+
+
+% ##########
+\begin{frame}
+  \frametitle{Niemiecki Idealizm}
+
+  \begin{block}{Pierwsze uderzenie Kanta}
+    Idealizm Kanta dał, między innymi, początek ruchowi jaki nosi
+    nazwę Niemiecki Idealizm. Oprócz samej myśli Kanta oddziaływały tu
+    niewątpliwie jego źródła, takie jak pietyzm.
+  \end{block}
+  \pause
+
+  \begin{block}{Warto się zastanowić}
+    Kant był pierwszym wielkim filozofem piszącym po niemiecku (bardzo
+    nieczytelnym niemieckim), w czasach gdy zaczęła się rodzić
+    współczesna koncepcja niemieckości.
+  \end{block}
+
+\end{frame}
+% ##########
+
+
+
+% ##########
+\begin{frame}
+  \frametitle{Niemiecki Idealizm}
+
+  \begin{block}{Pierwszy etap}
+    \begin{figure}
+      \centering
+
+      \includegraphics[height=1.6in, width=1.5in]{Fichte.jpg}
+      \includegraphics[height=1.6in, width=1.4in]{Schelling.jpg}
+      \caption{Johann~Gottlieb~Fichte (1762--1814), Friedrich
+        Schelling (1775--1854)}
+    \end{figure}
+  \end{block}
+
+\end{frame}
+% ##########
+
+
+
+% ##########
+\begin{frame}
+  \frametitle{Niemiecki Idealizm}
+
+  \begin{block}{Kulminacja}
+    \begin{figure}
+      \centering
+
+      \includegraphics[height=1.6in, width=1.4in]{Hegel.jpg}
+      \caption{Georg Wilhelm Friedrich Hegel (1770--1831)}
+    \end{figure}
+  \end{block}
+
+  \begin{block}{}
+    Prawdopodobnie drugi po Kancie najbardziej wpływowy filozof z~tu
+    przedstawionych.
+  \end{block}
+
+\end{frame}
+% ##########
+
+
+
+% ##########
+\begin{frame}
+  \frametitle{Niemiecki Idealizm}
+
+  \begin{block}{Idee i~wpływ}
+    \begin{itemize}
+      \pause
+    \item[--] Wpływ na wiek XIX był po~prostuj ogromny. \pause
+    \item[--] Relacja człowiek-świat. \pause
+    \item[--] Koncepcja filozofii dziejów, w zupełnie nowym ujęciu.
+      \pause
+    \item[--] Miejsce jednostki w świecie i państwie. \pause
+    \item[--] Osiągnięcie absolutu. \pause
+    \item[--] Romantyzm. \pause
+    \item[--] Związek z~gnostycyzmem.
+    \end{itemize}
+  \end{block}
+  \pause
+
+  \begin{block}{A co na to Kant?}
+    \pause Dwie rzeczy napełniają umysł coraz to nowym i wzmagającym
+    się podziwem i czcią, im częściej i trwalej się nad nimi
+    zastanawiamy: niebo gwiaździste nade mną i~prawo moralne we mnie.
+  \end{block}
+
+    \begin{block}{Fenomenologia Ducha}
+      Wydane w~1807 roku dzieło Hegla ,,Die Ph\"{a}nomenologie
+      \newline des Geistes'' to jedno z~najważniejszych dzieł
+      filozoficznych ostatnich stuleci. Według Hegla fenomenologia to
+      ,,nauka o~doświadczaniu świadomości''.
+    \end{block}
+    \pause
+
+    \begin{block}{Kilka ważny elementów}
+      \begin{itemize}
+      \item ,,Des Geistes''.
+        % \item Książka porusza prawie każdy temat.
+      \item Filozofia dialektyczna.
+      \item Samoświadomość.
+      \item Dialektyka pana i niewolnika.
+      \end{itemize}
+    \end{block}
+
+  \begin{block}{Phainomenon}
+    Z greki obserwowany, zjawisko. Istniej również kierunek filozofii
+    zwany fenomenologią (o~tym potem).
+  \end{block}
+  \pause
+
+  \begin{block}{Wpływ tego nurtu ciężko oszacować i przecenić}
+    \begin{itemize}
+    \item Jest jednym z~najważniejszych źródeł romantyzmu
+      europejskiego. Niewątpliwy związek z nim mieli Samuel Taylor
+      Coleridge, Thomas De Quincey, Juliusz Słowacki, jednak na nich
+      lista się na pewno nie kończy.
+    \item Filozofia historii.
+    \item Rekonstrukcja gnostycyzmu przez Schellinga.
+    \item Neoheglizm był żywy co najmniej do końca XIX wieku.
+    \end{itemize}
+  \end{block}
+
+\end{frame}
+% ##########
+
+
+
+% ##########
+\begin{frame}
+  \frametitle{Ale, natura ludzka jest taka\ldots}
+  \pause
+
+  \begin{block}{Antyheglizm}
+    \begin{figure}
+      \centering
+
+      \includegraphics[height=1.6in,
+      width=1.4in]{Soren_Kierkegaard_1.jpg}
+      \includegraphics[height=1.6in, width=1.2in]{Karl_Marx_1.jpg}
+      \pause
+      \caption{Søren Kierkegaard (1813--1855), Karl Marx (1818--1883)}
+    \end{figure}
+  \end{block}
+
+\end{frame}
+% ##########
+
+
+
+% ##########
+\begin{frame}
+  \frametitle{Ich bardziej znane wizerunki}
+
+  \begin{block}{Antyheglizm}
+    \begin{figure}
+      \centering
+
+      \includegraphics[height=1.6in,
+      width=1.2in]{Soren_Kierkegaard_2.jpg}
+      \includegraphics[height=1.6in, width=1.2in]{Karl_Marx_2.jpg}
+      \caption{Søren Kierkegaard (1813--1855), Karl Marx (1818--1883)}
+    \end{figure}
+  \end{block}
+
+\end{frame}
+% ##########
+
+
+
+% ##########
+\begin{frame}
+  \frametitle{Antyheglizm kantowski Schopenhauer i~jego następstwa}
+
+  \begin{block}{}
+    \begin{figure}
+      \centering
+
+      \includegraphics[height=1.6in,
+      width=1.4in]{Arthur_Schopenhauer_1.jpg}
+      \includegraphics[height=1.6in,
+      width=1.2in]{Friedrich_Nietzsche_1.jpg} \pause
+      \caption{Arthur Schopenhauer (1788--1860), Friedrich Nietzsche
+        (1844--1900)}
+    \end{figure}
+  \end{block}
+
+\end{frame}
+% ##########
+
+
+
+% ##########
+\begin{frame}
+  \frametitle{I~ich bardziej znane wizerunki}
+
+  \begin{block}{}
+    \begin{figure}
+      \centering
+
+      \includegraphics[height=1.6in,
+      width=1.4in]{Arthur_Schopenhauer_2.jpg}
+      \includegraphics[height=1.6in,
+      width=1.4in]{Friedrich_Nietzsche_2.jpg}
+      \caption{Arthur Schopenhauer (1788--1860), Friedrich Nietzsche
+        (1844--1900)}
+    \end{figure}
+  \end{block}
+
+\end{frame}
+% ##########
+
+
+
+% ##########
+\begin{frame}
+  \frametitle{A że wpływowi Kanta nie ma końca}
+
+  \begin{block}{Ameryka i\ldots}
+    \begin{figure}
+      \centering
+
+      \includegraphics[height=1.6in, width=1.1in]{Ralph_Emerson.jpg}
+      \caption{Ralph Waldo Emerson (1803--1882)}
+    \end{figure}
+  \end{block}
+
+  \begin{block}{}
+    Twórca pierwszej amerykańskiej filozofii zwanej
+    \emph{transcendetalizmem}. Jej znajomość jest absolutnie niezbędna
+    przy studiowaniu kultury Stanów Zjednoczonych.
+  \end{block}
+
+\end{frame}
+% ##########
+
+
+
+% ##########
+\begin{frame}
+  \frametitle{Zanim przejdziemy do zakończenia, mała odskocznia}
+
+  \begin{block}{Kto jeszcze?}
+    \begin{figure}
+      \centering
+
+      \includegraphics[height=1.6in, width=1.9in]{Ludwig_von_Mises.jpg}
+      \includegraphics[height=1.6in, width=1.2in]{Hans_Hermann_Hoppe.jpg}
+      \includegraphics[height=1.6in, width=1.2in]{Bronislaw_Malinowski.jpg}
+      \caption{Ludwig von Mises (1881--1973),
+          Hans-Hermann Hoppe \newline (1949--), Bronisław Malinowski
+          (1884--1942)}
+    \end{figure}
+  \end{block}
+\end{frame}
+% ##########
+
+
+
+% ##########
+\begin{frame}
+  \frametitle{Krótki przegląd pozostałych filozofów XIX w.}
+
+  \begin{block}{Utylitaryzm i pozytywizm}
+    \begin{figure}
+      \centering
+
+      \includegraphics[height=1.6in, width=1.2in]{Jeremy_Bentham.jpg}
+      \includegraphics[height=1.6in, width=1.2in]{John_Stuart_Mill.jpg}
+      \includegraphics[height=1.6in, width=1.2in]{AC}
+      \caption{Jeremy Bentham (1748--1832), John Stuart Mill
+        (1806--1873), Auguste Comte (1798--1857)}
+    \end{figure}
+  \end{block}
+
+\end{frame}
+% ##########
+
+
+
+% ##########
+\begin{frame}
+  \frametitle{Krótki przegląd pozostałych filozofów XIX w.}
+  \begin{block}{Ameryka: transcendentalizm i pragmatyzm}
+    \begin{figure}
+      \centering \includegraphics[height=1.6in, width=1.2in]{HT}
+      \includegraphics[height=1.6in, width=1.2in]{CP}
+      \includegraphics[height=1.6in, width=1.2in]{William_James.jpg}
+      \caption{Henry David Thoreau (1748--1832), Charles Sanders
+        Peirce (1839--1914), William James (1842--1910)}
+    \end{figure}
+  \end{block}
+
+\end{frame}
+% ##########
+
+
+
+% ##########
+\begin{frame}
+  \frametitle{Krótki przegląd pozostałych filozofów XIX~w.}
+
+  \begin{block}{Wielki nauczycie}
+    \begin{figure}
+      \centering
+
+      \includegraphics[height=1.6in, width=1.2in]{FB}
+      \caption{Franz Brentano (1838--1917)}
+    \end{figure}
+  \end{block}
+
+\end{frame}
+% ##########
+
+
+
+% ##########
+\begin{frame}{Na zakończenie}
+  \frametitle{Krótki przegląd pozostałych filozofów XIX w.}
+  \begin{block}{Zapomniany Wiktoriański gigant}
+    \begin{figure}
+      \centering
+
+      \includegraphics[height=1.6in, width=1.1in]{Herbert_Spencer.jpg}
+      \caption{Herbert Spencer (1820--1903)}
+    \end{figure}
+  \end{block}
+\end{frame}
+% ##########
+
+
+
+% ##########
+\begin{frame}
+  \frametitle{Emanuel Swedenborg}
+  \begin{block}{}
+    \begin{figure}
+      \centering
+
+      \includegraphics[height=1.6in, width=1.3in]{Emanuel_Swedenborg.png}
+      \caption{Emanuel Swedenborg (1688--1772)}
+    \end{figure}
+  \end{block}
+
+  \begin{block}{Kto to jest?}
+    Najwybitniejszy mag czasów nowożytnych. I~Oświecenia, a~to duże
+    osiągnięcie.
+  \end{block}
+
+\end{frame}
+% ##########
+
+
+
+% ##########
+\begin{frame}
+
+  \begin{block}{Wpływy i opinie}
+    \begin{itemize}
+    \item[--] Immanuel Kant \emph{Tr\"{a}ume eines Geistersehers}
+      (\emph{Sny o~duchu widzącym}) 1766~r.
+    \item[--] Ralph Waldo Emerson \emph{Swedenborg;~or, the~Mystic}.
+    \item[--] Daisetsu Teitaro Suzuki (1870--1966) \emph{Swedenborg
+        --~Budda Północy}.
+    \item[--] Czesław Miłosz. Wiersz \emph{Piekła Swedenborga}, esej
+      w~\emph{Ogrodzie nauk}, wywiad we wstępie do książki S.~Toksvig
+      \emph{Emanuel Swedenborg --~uczony i~mistyk}. \textbf{Nawet
+        w~jego opisach piekła widać oko inżyniera}.
+    \item[--] Joseph Campbell, \emph{Bohater o tysiącu twarzy},
+      1949~r. \\ (Ale to temat na inne seminarium.)
+    \end{itemize}
+  \end{block}
+
+\end{frame}
+% ##########
+
+
+
+% ##########
+\begin{frame}
+  \frametitle{Ale przecież\ldots}
+  \begin{block}{Romantyk wygląda tak}
+    \begin{figure}
+      \centering
+
+      \includegraphics[height=1.3in, width=1.1in]{CF} \pause
+      \includegraphics[height=1.3in, width=1.0in]{Immanuel_Kant_2.jpg}
+    \end{figure}
+    % A nie tak.
+  \end{block}
+  \pause
+
+  \begin{block}{Oddajmy głos Kantowi}
+    \textbf{Dwie rzeczy napełniają umysł coraz to nowym i~wzmagającym
+      się podziwem i czcią, im częściej i trwalej się nad nimi
+      zastanawiamy: niebo gwiaździste nade mną i prawo moralne we
+      mnie.} --~\emph{Krytyka praktycznego rozumu} (kto czytał
+    \emph{Linię oporu} Dukaja?).
+  \end{block}
+
+\end{frame}
+% ##########
+
+
+
+% ##########
+\begin{frame}
+  \frametitle{Zanim przejdziemy do sedna, mała odskocznia}
+
+  \begin{block}{Czy Freud był kantystą?}
+    \begin{figure}
+      \centering
+
+      \includegraphics[height=1.6in, width=1.2in]{Sigmund_Freud.jpg}
+      \caption{Sigmund Freud (1856--1939)}
+    \end{figure}
+  \end{block}
+
+\end{frame}
+% ##########
+
+
+
+% ##########
+\begin{frame}
+  \frametitle{Pole walki ustawione, możemy przejść do dzieła}
+
+  \begin{block}{Wielki dwudziestowieczny rozłam}
+    \pause
+    \begin{itemize}
+    \item Kant zdefiniował XIX stulecie w stopniu niebywałym.
+    \item Dlatego też, prawem ludzkiej natury, filozofia
+      dwudziestowieczna została w pierwszym rzucie zdefiniowana przez
+      próby odrzucenia modelu filozofii Kanta.
+    \item Udało się to w sposób różny i nie sięgnęło wszystkich sfer
+      na których odcisnął swe piętno wielki Immanuel.
+    \item Zrodziło to dwie wielkie szkoły filozofii, które zdominowały
+      wiek XX.
+    \item Obu pierwsze przebłyski pojawiły się w Niemczech.
+    \item Znane są jako filozofia analityczna i kontynentalna.
+    \item Jest to prawdopodobnie największy i najbardziej skandaliczny
+      rozłam w~historii filozofii.
+    \end{itemize}
+  \end{block}
+
+\end{frame}
+% ##########
+
+
+
+% ##########
+\begin{frame}
+  \frametitle{Osoby dramatu}
+  \pause
+
+  \begin{block}{Pierwsze fala}
+    \begin{figure}
+      \centering
+
+      \includegraphics[height=1.6in, width=1.4in]{Gottlob_Frege.jpg}
+      \includegraphics[height=1.6in, width=1.4in]{Edmund_Husserl.jpg}
+      \caption{Gottlob Frege (1848--1925), Edmund Husserl
+        (1859--1938)}
+    \end{figure}
+  \end{block}
+
+\end{frame}
+% ##########
+
+
+
+% ##########
+\begin{frame}
+  \frametitle{Osoby dramatu}
+
+  \begin{block}{Pierwsze fala}
+    \begin{figure}
+      \centering
+
+      \includegraphics[height=1.6in, width=1.2in]{GEMoore.jpeg}
+      \includegraphics[height=1.6in,
+      width=1.4in]{Bertrand_Russell.jpeg}
+      \caption{G.~E.~Moore (1873--1958), Bertrand Russell
+        (1872--1970)}
+    \end{figure}
+  \end{block}
+
+\end{frame}
+% ##########
+
+
+
+% ##########
+\begin{frame}
+  \frametitle{Spojrzenie perspektywiczne}
+
+  \begin{block}{Podobieństwa i różnice}
+    \begin{itemize}
+    \item Obie zaczęły się w Niemczech.
+    \item Ich punktem wyjścia była logika.
+    \item Jednak szkoła kontynentalna znalazła szybko inne tematy
+      zainteresowań.
+    \item Filozofia analityczna zdominowała do lat 60\dywiz tych świat
+      anglosaski, kontynentalna -- cała resztę.
+    \item W obu język zaczął odgrywać pierwszoplanową rolę.
+    \item Plany ojców, w obu przypadkach, zostały wykończone przez
+      najwybitniejszych synów.
+    \item Jeżeli słyszał ktoś coś głupiego co robiona na
+      średniowiecznych uniwersytetach, filozofowie ci co najmniej im
+      dorównali.
+    \end{itemize}
+  \end{block}
+
+\end{frame}
+% ##########
+
+
+
+% ##########
+\begin{frame}{Dwaj giganci --~niszczyciele}
+  \pause
+
+  \begin{block}{Czyli\ldots}
+    \begin{figure}
+      \centering
+
+      \includegraphics[height=1.6in,
+      width=1.2in]{Martin_Heidegger.jpg}
+      \includegraphics[height=1.6in,
+      width=1.4in]{Ludwig_Wittgenstein.jpg} \pause
+
+      \caption{Martin Heidegger (1889--1976), Ludwig Wittgenstein
+        (1889--1951)}
+    \end{figure}
+  \end{block}
+
+\end{frame}
+% ##########
+
+
+
+% ##########
+\begin{frame}{Martin Heidegger}
+
+  \begin{block}{Życiorys esencjonalny}
+    \begin{itemize}
+    \item Urodził się.
+    \item Był nazistą.
+    \item Umarł.
+    \end{itemize}
+  \end{block}
+
+  \begin{block}{Życiorys filozoficzny}
+    \begin{itemize}
+      \pause
+    \item Student Husserla.
+    \item Ideowy Niemiec.
+    \item Dokonał ,,zwrotu'' w swej filozofii.
+      % \item Ustanowił dwudziestowieczną hermeneutykę. \pause
+    \item Miał obsesje na punkcie etymologii i~pisał straszliwie
+      niezrozumiale.
+    \item Główne dzieło: \\
+      Seit und Zeit (Bycie i~czas), 1927.
+    \end{itemize}
+  \end{block}
+
+\end{frame}
+% ##########
+
+
+
+% ##########
+\begin{frame}{Seit und Zeit}
+
+  \begin{block}{Co warto wiedzieć}
+    \begin{itemize}
+    \item Jedna z~dwóch najważniejszych książek filozoficznych po roku
+      1925.
+    \item Światowy bestseller. M.in sześć tłumaczeń na język japoński.
+    \item Zadedykowane Husserlowi.
+    \item Dzieło fundacyjne współczesnego egzystencjalizmu.
+    \item Jest to w zasadzie pierwsza część dwutomowego dzieła.
+    \item Tom~II nigdy nie został napisany.
+    \end{itemize}
+  \end{block}
+  \pause
+
+  \begin{block}{Ciekawostka}
+    \pause Światowa twarz egzystencjalizmu Jean-Paul Sartre (jak ktoś
+    nie wierzy to~niech obejrzy ostatni odcinek \emph{Black Lagoon})
+    wydał w~1943~r. książkę \emph{L'étre et le néant} (pl. \emph{Bycie
+      i~nicość}).
+  \end{block}
+
+\end{frame}
+% ##########
+
+
+
+% ##########
+\begin{frame}{Seit und Zeit}
+
+  \begin{block}{Pytanie o sens bycia}
+    \textbf{Czy w dzisiejszych czasach dysponujemy odpowiedzią na
+      pytanie, co właściwie rozumiemy pod słowem ,,bytujący''? W
+      żadnym razie nie. Dlatego trzeba na nowo postawić \emph{pytanie
+        o sens bycia}. Czy jednak dzisiaj fakt, że nie rozumiemy
+      wyrażenia ,,bycie'' jest naszym jedynym kłopotem? Bynajmniej.
+      Dlatego też przede wszystkim musimy na nowo obudzić zrozumienie
+      dla sensu tego pytania. Zamiarem niniejszej rozprawy jest
+      konkretne opracowanie pytania o sens ,,bycia''. Prowizorycznym
+      celem zaś będzie interpretacja \emph{czasu} jako możliwego
+      horyzontu wszelkiego w ogóle rozumienia bycia.}
+  \end{block}
+
+  \begin{block}{Głebokie pytanie\ldots}
+    O~co mu chodziło?
+  \end{block}
+
+\end{frame}
+% ##########
+
+
+
+% ##########
+\begin{frame}{Seit und Zeit}
+
+  \begin{block}{Uwagi techniczne}
+    \begin{itemize}
+    \item Heidegger używał silnie neologizmów, lub zwykłych słów
+      niemieckich w zupełnie innym sensie.
+    \item Przykład: Dasein.
+    \item Jego styl jest trudny/nieludzko
+      zagmatwany/niejasny/zagadkowy/bezsensowny/maskujący brak treści
+      (niepotrzebne skreślić). Jako przykład podaję fragment z~jego
+      dzieła ,,Zeit und Seit'' (,,Czas i bycie'', ale wymyślił),
+      wybrany przez Jacques Derrida, będącego pod jego wielkim
+      wpływem, jako motto jednej
+      z jego prac: \\
+      ,,Wszechobecność wyistaczania ukazuje nam się najwyraźniej
+      wówczas, gdy zauważymy, że również i właśnie odistaczanie
+      określone jest poprzez owo, tajemnicze niekiedy wyistaczanie''.
+    \end{itemize}
+    \pause
+  \end{block}
+
+  \begin{block}{Teraz wyzwanie}
+    O czym mówi ,,Seit und Zeit''?
+  \end{block}
+
+\end{frame}
+% ##########
+
+
+
+% ##########
+\begin{frame}{Seit und Zeit}
+
+  \begin{block}{Pytania}
+    \begin{itemize}
+      \pause
+    \item Dlaczego nie ma drugiej części? \pause
+    \item Jaki był jej wpływ?
+    \end{itemize}
+  \end{block}
+
+\end{frame}
+% ##########
+
+
+
+% ##########
+\begin{frame}{Ludwig Wittgenstein}
+  \begin{block}{Życiorys}
+    \begin{itemize}
+    \item Urodził się w Wiedniu, w Cesarstwie Austro-Węgierskim.
+    \item Jego rodzina ze strony miała żydowskie pochodzenie, ze
+      strony matki czesko-słoweńskie
+    \item Był jednym z dziewięciorga dzieci potentata stalowego
+      i~jednego z~najbogatszych ludzi w~Europie.
+    \item Początkowo pragnął zostać inżynierem aeronautyki.
+    \item Nauka potrzebnej mu matematyki doprowadziło go do pytań o
+      jej podstawy.
+    \end{itemize}
+  \end{block}
+
+\end{frame}
+% ##########
+
+
+
+% ##########
+\begin{frame}
+  \begin{block}{Życiorys filozoficzny}
+    \begin{itemize}
+      \pause
+    \item Jako jedyny chyba człowiek w pierwszej połowie XX w. czytał
+      i brał na serio Schopenhauera.
+    \item Problemy z podstawami matematyki prowadzą go do prac
+      Frege`ego i Russela. Poznaje i zaprzyjaźnia się z oboma. \pause
+    \item Studiuje pod Russelem. \pause
+    \item 1914 wybucha I Wojna Światowa, Wittgenstein zaciąga się do
+      wojska Austro-Węgierski`ego. \pause
+    \item W przerwach działań wojennych tworzy \emph{Tractatus\ldots}
+      i~wiele notatek filozoficznych, zostaje też dwukrotnie
+      wyznaczony do~medalu za~odwagę.
+    \item
+    \end{itemize}
+  \end{block}
+
+\end{frame}
+% ##########
+
+
+
+% ##########
+\begin{frame}{Na zakończenie}
+
+  \begin{block}{Ci którzy zostali pominięci}
+    \begin{figure}
+      \centering
+
+      \includegraphics[height=1.6in,
+      width=1.2in]{John_Stuart_Mill.jpg}
+      \includegraphics[height=1.6in, width=1.2in]{August_Comte.jpg}
+      \includegraphics[height=1.6in, width=1.2in]{Charles_Pierce.jpg}
+      \caption{John Stuart Mill (1806--1873), Auguste Comte
+        (1798--1857), Charles Sanders Peirce (1839--1914)}
+    \end{figure}
+  \end{block}
+
+\end{frame}
+% ##########
+
+
+
+% ##########
+\begin{frame}{Na zakończenie}
+
+  \begin{block}{Ci którzy zostali pominięci}
+    \begin{figure}
+      \centering
+
+      \includegraphics[height=1.6in, width=1.2in]{William_James.jpg}
+      \includegraphics[height=1.6in, width=1.2in]{Henri_Bergson.jpg}
+      \includegraphics[height=1.6in,
+      width=1.2in]{Alfred_North_Whitehead.jpg}
+      \caption{William James (1842--1910), Henri-Louis Bergson
+        (1859--1941), Alfred North Whitehead (1861--1947)}
+    \end{figure}
+  \end{block}
+
+\end{frame}
+% ##########
+
+
+
+% ##########
+\begin{frame}{Na zakończenie}
+  \begin{block}{Ci którzy zostali pominięci}
+    \begin{figure}
+      \centering
+
+      \includegraphics[height=1.6in,
+      width=1.2in]{Maurice_Merleau_Ponty.jpg}
+      \includegraphics[height=1.6in, width=1.3in]{John_Dewey.jpg}
+      \includegraphics[height=1.6in,
+      width=1.5in]{Willard_Van_Orman_Quine.jpg}
+      \caption{Maurice Merleau-Ponty (1908--1961), John Dewey
+        (1859--1961), Willard Van Orman Quine (1908--2000)}
+    \end{figure}
+  \end{block}
+
+\end{frame}
+% ##########
+
+
+
+% ##########
+\begin{frame}{Na zakończenie}
+  \begin{block}{Ci którzy zostali pominięci}
+    \begin{figure}
+      \centering
+
+      \includegraphics[height=1.6in, width=1.2in]{Rudolf_Carnap.jpg}
+      \includegraphics[height=1.6in,
+      width=1.1in]{Elizabeth_Anscombe.jpg}
+      \includegraphics[height=1.6in, width=1.2in]{Karl_Poper.jpg}
+      \caption{Rudolf Carnap (1891--1970), Gertrude Elizabeth Margaret
+        Anscombe (1919--2001), Karl Popper (1902--1994)}
+    \end{figure}
+  \end{block}
+
+\end{frame}
+% ##########
+
+
+
+% ##########
+\begin{frame}{Na zakończenie}
+
+  \begin{block}{Ci którzy zostali pominięci}
+    \begin{figure}
+      \centering
+
+      \includegraphics[height=1.6in, width=1.3in]{Ayn_Rand.jpg}
+      \includegraphics[height=1.6in, width=1.5in]{John_Rawls.jpg}
+      \includegraphics[height=1.6in, width=1.1in]{Robert_Nozik.jpg}
+      \caption{Ayn Rand (1905--1982), John Rawls (1921--2002), Robert
+        Nozick (1938--2002)}
+    \end{figure}
+  \end{block}
+
+\end{frame}
+% ##########
+
+
+
+% ##########
+\begin{frame}{Na zakończenie}
+  \begin{block}{Ci którzy zostali pominięci}
+    \begin{figure}
+      \centering
+
+      \includegraphics[height=1.6in,
+      width=1.2in]{Hans_Georg_Gadamer.jpg}
+      \includegraphics[height=1.6in,
+      width=1.3in]{Claude_Levi_Strauss.jpg}
+      \includegraphics[height=1.6in,
+      width=1.2in]{Alisdair_MacIntyre.jpg}
+      \caption{Hans-Georg Gadamer (1900--2002), Claude Lévi-Strauss
+        (1908--2009), Alasdair MacIntyre (1931--2007)}
+    \end{figure}
+  \end{block}
+\end{frame}
+% ##########
+
+
+
+% ##########
+\begin{frame}{I na ostatek}
+  \begin{block}{Najważniejszy filozof drugiej połowy XX w.}
+    \pause
+    \begin{figure}
+      \centering
+
+      \includegraphics[height=1.6in,
+      width=1.2in]{Jacques_Derrida_1.jpg}
+      \includegraphics[height=1.6in,
+      width=1.8in]{Jacques_Derrida_3.jpg}
+      \includegraphics[height=1.6in,
+      width=1.2in]{Jacques_Derrida_2.jpg}
+      \caption{Jacques Derrida (1930--2004)}
+    \end{figure}
+  \end{block}
+\end{frame}
+% ##########
+
+
+
+
+
+% ####################################################################
+% ####################################################################
+% Bibliografia
+\bibliographystyle{alpha} \bibliography{Bibliography}{}
+
+
+% ############################
+
+% Koniec dokumentu
+\end{document}
