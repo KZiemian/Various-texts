@@ -348,8 +348,8 @@
   O~tym, że~zaokrąglanie nie musi być rzeczą banalną, a~zadania
   uczonych w~kwestii tego jak należy to robić~są podzielone, można~się
   przekonać czytając artykuł na~angielskiej
-  \href{https://en.wikipedia.org/wiki/Rounding}{Wikipedii
-    --~Rounding}. Metod tu~polecana nosi tam nazwę \emph{Round half
+  \href{https://en.wikipedia.org/wiki/Rounding}{\emph{Wikipedii
+    --~Rounding}}. Metod tu~polecana nosi tam nazwę \emph{Round half
     to~even}.
 \end{enumerate}
 
@@ -405,33 +405,33 @@ red.~Andrzeja Magiery
   \eqref{sec:estymator}.
 \item \textbf{Błędy systematyczne}, to~błędy ,,wbudowane'' w~sam
   sposób przeprowadzania danego eksperymentu, są~więc popełniane
-  systematycznie. Np.~na linijce najmniejszy przedział ma~długość
-  milimetra, więc systematycznie nie~możemy zmierzyć długości
-  z~dokładnością większą niż 1~milimetr. Przypisujemy więc pomiarowi
-  długości tą~linijką $L$ błąd systematyczny
-  $\Delta_{ \textrm{sys} } L = 0.1 \times 10^{ -2 } \si{.m}$.
+  systematycznie. Przykładowo, ochładzamy próbkę metalu jednocześnie
+  badając jego przewodność elektryczną. Jeżeli mierzymy temperaturę
+  próbki termometrem to~może on~potrzebować więcej czasu niż~próbka,
+  aby~zmienić swoją temperaturę, będzie więc systematycznie ją
+  zawyżał. Aby~wyeliminować ten problem należałoby powtórzyć pomiar
+  przy ogrzewaniu metalu i~porównaniu wyników.
+
+  Innym, zadziwiająco często pojawiającym~się błędem systematycznym,
+  jest ten wynikający z~paralaksy. Osoba wykonująca pomiar patrzy~się
+  pod kątem na~aparaturę pomiarową, przez co~systematycznie źle
+  odczytuje wyniki\footnote{Zapewne błąd ten wynika z~pragnienia
+    pewnych ciał do~pozostania w~spoczynku.}
   
   O~ile opisany powyżej rodzaj błędów systematycznych jest łatwy
   do~zauważenia i~oszacowania, istnieją inne, znacznie trudniejsze
   do~wykrycia i~oszacowanie, przez co~są~dużo groźniejsze. Może~się
   zdarzyć że~efekt fizyczny, na~którym opieramy pomiar, lub~teoria
   na~podstawie której łączymy bezpośrednio zmierzone wielkości
-  fizyczne z~poszukiwaną wielkością powoduje np. systematyczne
+  fizyczne z~poszukiwaną wielkością powoduje np.~systematyczne
   zawyżanie wyników.
 
   Należy podkreślić, że~błędy systematyczne \tb{nie} muszą być znane
   eksperymentatorom, co jest dużym wyzwaniem przy przeprowadzaniu
   doświadczeń. Przykładowo, w~badanym procesie fizycznym występuje
   zjawisko, które nie zostało wzięte pod uwagę podczas projektowania
-  eksperymentu. Bardziej przyziemnym przypadkiem, choć nie mniej
-  groźnym dla wyników, jest błąd w~kodzie programu obsługującym
-  aparaturę\footnote{Niestety, kod dużych programów zawsze zawiera
-    jakieś błędy, zwykle bardzo małe. Jednak znane~są przypadki,
-    gdy~błędny kod postawiły całe lata badań pod znakiem zapytania.},
-  który błędnie przypisuje wartości pewnym mierzonym wielkościom.
-  Z~tego powodu naprawdę ważne wielkości mierzy~się w~kilku
-  niezależnych eksperymentach, najlepiej za~pomocą różnych zjawisk
-  fizycznych.
+  eksperymentu.
+
 \item \textbf{Błędy grube}, to wszystkie sytuacja kiedy
   eksperymentator zrobił coś bardzo źle, albo~aparatura zawiodła.
   Np.~ktoś zmierzył masę próbki, nie zdejmując z~wagi swojego kubka
@@ -440,6 +440,16 @@ red.~Andrzeja Magiery
   bezwartościowy. Każdy pomiar obarczony błędem grubym należy usunąć
   z~rozważań\footnote{Chyba, że~ma~się \tb{naprawdę} dobry powód,
     by~go zostawić.}.
+
+  Również błędy grube \textbf{nie} muszą być znane eksperymentatorom.
+  Przykładowo w~kodzie programu obsługującym aparaturę znajduje~się
+  błąd\footnote{Niestety, kod dużych programów zawsze zawiera jakieś
+    błędy, zwykle bardzo małe. Jednak znane~są przypadki, gdy~błędny
+    kod postawiły całe lata badań pod znakiem zapytania.}, który
+  błędnie przypisuje wartości pewnym mierzonym wielkościom. Z~tego
+  powodu naprawdę ważne wielkości mierzy~się w~kilku niezależnych
+  eksperymentach, najlepiej za~pomocą różnych zjawisk fizycznych.
+
 \item \textbf{Niepewność eksperymentu} to~ostateczna niepewność całego
   eksperymentu, musi więc uwzględniać wszystkie poprzednie typy
   niepewności i~błędu.
@@ -464,30 +474,51 @@ red.~Andrzeja Magiery
   przypadkowej (jej obliczaniu jest poświęcony jest podparagrafa
   \eqref{sec:obliczanie}). Przyczyna może być taka, że~np.~mierzy
   długość małej płytki linijką i~jej najmniejsza przedziałka jest na
-  tyle duża, że~wszystkie wyniki są~jednakowe. Inny przypadek jest
-  taki, że~z~jakiegoś powodu wykonaliśmy tylko jeden pomiar danej
+  tyle duża, że~wszystkie wyniki~się w~niej mieszczą. Inny przypadek
+  jest taki, że~z~jakiegoś powodu wykonaliśmy tylko jeden pomiar danej
   wielkości.
 
-  Wówczas postępujemy w~następujący sposób\footnote{Ten punkt wymaga
-    poprawy, ale~w~tym momencie autorzy nie mają dobrego pomysłu jak
-    to zrobić.}. Niech $L$ oznacza szerokość najmniejszego przedziału
-  mieszczącego wszystkie zaobserwowane wyniki, nie może ona być
-  mniejsza niż~błąd systematyczny pomiaru (w~poprzednim przykładzie
-  $L$~będzie równe szerokości najmniejszego podziału na~linijce).
-  Jeśli wykonaliśmy tylko jeden pomiar za~$L$ przyjmujemy po~prostu
-  błąd systematyczny pomiaru. Całemu pomiarowi przypisujemy wtedy
-  niepewność eksperymentu równą
+  Wówczas postępujemy w~następujący sposób. Szukamy najmilejszego
+  przedziału jaki zawiera wszystkie wyniki, jaki jesteśmy przy użyciu
+  dostępnych przyrządów zmierzyć i~oznaczmy jego długość $L$.
+  W~przykładzie z~linijkom długość ta~będzie równa jej najmniejszej
+  podziałce. W~przypadku jeśli wykonaliśmy tylko jeden pomiar, za~$L$
+  należy przyjąć długość przedziału w~którym musiał znajdować~się
+  prawdziwy wynik, aby~przyrząd wskazał otrzymaną wielkość.
+  Przykładowo zmierzyliśmy wartość temperatury
+  $T = 10.0 ^{ \circ }\si{C}$, zaś aparatura pozwala mierzyć~ją
+  z~dokładnością do~$0.01^{ \circ }\si{C}$, więc prawdziwa
+  temperatura musi zawierać~się w~przedziale
+  $9.9^{ \circ }\si{C} - 10.1 ^{ \circ }\si{C}$. W~tym przypadku mamy
+  więc~$L = 0.2 ^{ \circ }\si{C}$.
+
+  W~obu tych sytuacjach całemu pomiarowi przypisujemy niepewność
+  przypadkową
   \begin{equation}
     \label{eq:2}
     \sigma( x ) = \frac{ L }{ 2 \sqrt{ 3 } }.
   \end{equation}
-  Uzasadnienie tej procedury i~wyprowadzenie powyższego magicznego
-  wzoru można znaleźć
+  Uzasadnienie i~wyprowadzenie tego ,,magicznego'' wzoru można znaleźć
   w~\href{http://users.uj.edu.pl/\~ufkamys/BK/smop1N\_h.pdf}{skrypcie}
-  Bogusława Kamysa na~stronach~24--25.
-\item Pewne błędy mogą być zarówno systematyczne jak i~grube.
-  Na~przykład, jeśli eksperymentator źle skalibrował wagę, tak~że
-  zawyża ona o~stałą wartość wagę mierzonych próbek.
+  Bogusława Kamysa na~stronach~25--26.
+
+\item Pewne błędy mogą być zarówno systematyczne jak
+  i~grube\footnote{Czytelnik mógł to już zauważyć po~przytoczonych
+    przykładach.}. Na~przykład, jeśli eksperymentator źle skalibrował
+  wagę, tak~że zawyża ona o~stałą wartość wagę mierzonych próbek.
+  W~takich niejasnych sytuacjach nie należy~się specjalnie przejmować
+  pedantyczną klasyfikacją błędów.
+  
+\item W~pewnych sytuacjach jest szansa na~usunięcie błędów grubych.
+  Weźmy poprzedni przykład ze~źle skalibrowaną wagą. Jeśli jest pewne,
+  że~waga cały czas zawyżała wyniki o~stałą wartość, można ją odjąć od
+  uzyskanych wyników i~wpleść to~zagadnienie do~sprawozdania, jako
+  kalibrację przyrządów pomiarowych.
+
+  \textbf{Podkreślamy}, że~można tak zrobić \textbf{tylko wtedy}, gdy
+  jesteśmy pewni, że~to przesunięcie było stałe w~całym eksperymencie
+  lub~wykonamy dodatkowo krzywą kalibracyjną dla tej wagi. Krzywą taką
+  trzeba dołączyć do~sprawozdania.
 \end{enumerate}
 
 
@@ -516,16 +547,22 @@ podstawie oszacować ile wynosi wartość prawdziwa. Funkcję która
 pozwala nam wyliczyć to~oszacowanie nazywamy \emph{estymatorem},
 zaś~sam proces szukania takiej wartości \emph{estymacją}. Typowym
 sposobem szacowania prawdziwej wielkości na~podstawie $n$~pomiarów
-jest wzięcie średniej arytmetycznej
+z~których każdy ma~taką samą niepewność przypadkową jest wzięcie
+średniej arytmetycznej\footnote{Dla tej wielkości bywa też używane
+  oznaczenie $x_{ \textrm{E} }$.}
 \begin{equation}
   \label{eq:3}
-  x_{ \textrm{E} } = f( x_{ 1 }, x_{ 2 }, \ld, x_{ n } ) = \frac{ 1 }{ n }
-  \sum_{ i = 1 }^{ n } x_{ i }.
+  \overline{ x } = f( x_{ 1 }, x_{ 2 }, \ld, x_{ n } )
+  = \frac{ 1 }{ n } \sum_{ i = 1 }^{ n } x_{ i }.
 \end{equation}
-Widzimy\footnote{Mamy nadzieję, że~to prawda.} na~tym przykładzie,
-że~estymator jest funkcją, która na~podstawie $n$~pomiarów zwraca
-nam~oszacowanie prawdziwej wartości danej wielkości. Przykłady innych
-oszacowań prawdziwej wielkości, czyli estymatorów, podamy dalej.
+Z~sytuacją taką mamy do czynieniach choćby wtedy, gdy wykonujemy tym
+samym przyrządem serię pomiarów w~takich samych warunkach.
+\textbf{Nigdy} nie można tego wzoru używać, dla~zbioru wyników
+o~różnej niepewności. Widzimy\footnote{Mamy nadzieję, że~to prawda.}
+na~tym przykładzie, że~estymator jest funkcją, która na~podstawie
+$n$~pomiarów zwraca nam~oszacowanie prawdziwej wartości danej
+wielkości. Przykłady innych oszacowań prawdziwej wielkości, czyli
+estymatorów, podamy dalej.
 
 Chcielibyśmy by~nasze oszacowanie było najlepszym jakie można osiągnąć
 dysponując taką ilością wyników. Jednak pytanie ,,Jakie oszacowanie
@@ -620,8 +657,7 @@ to~musimy rozróżnić dwie wielkości.
 \tb{Ważne 1.} Nie wdając~się w~subtelne dywagacje, można podać
 następującą prostą regułę. Jako wynik konkretnego eksperymentu
 (ewentualnie serii pomiarowej) należy podać średnią arytmetyczną
-wyników, zaś~jej niepewność przypadkowa dana jest wzorem \eqref{eq:7}.
-
+wyników, zaś~jej niepewność przypadkowa dana jest wzorem \eqref{eq:7}. \\
 \tb{Ważne 2.} Jakość estymacji (oszacowania) danej wielkości bardzo
 silnie zależy od~ilości pomiarów. Popularne powiedzenie mówi,
 że~statystka zaczyna~się od~trzech pomiarów. Czyli dopiero z~trzem
@@ -632,8 +668,10 @@ lub~więcej niż~100. Jednak podczas zajęć laboratoryjnych często
 zupełnie wystarczy 10~wyników.
 
 \toadd{Wytłumaczeni o co chodzi z współczynnikami Student-Fishera.}
-Jeśli W~sytuacji kiedy ilość pomiarów jest za~mała, można skorzystać
-z~\emph{współczynników Studenta\dywiz Fishera}.
+Jeśli ma~się za małą ilość pomiarów, aby analiza była wartościowa,
+to~zawsze najlepszym rozwiązaniem jest wykonać ich~więcej. Jeśli
+jednak nie jest to możliwe, można skorzystać z~metody
+\textbf{współczynników Studenta\dywiz Fishera}.
 
 
 
@@ -686,7 +724,7 @@ z~taką niepewnością.
   Wynik należy wtedy zapiać jako
   \begin{equation}
     \label{eq:12}
-    x = \overline{x} \pm U( x )\: \textrm{jednostka},\,
+    x = \overline{x} \pm U( x )\: [\textrm{jednostka}],\,
     k = \textrm{przyjęta wartość}.
   \end{equation}
   Niekoniecznie trzeba podawać wartość współczynnika~$k$ w~tej samej
@@ -710,11 +748,12 @@ z~taką niepewnością.
   zawiera wartość prawdziwą z~prawdopodobieństwem około 95.5\%.
 
   Wszystkie wyżej wymienione wielkości procentowe wynikają z~własności
-  rozkładu Gaussa\footnote{Tutaj parę rzeczy opisaliśmy zbyt skrótowo.
-    Może kiedyś napiszemy to lepiej.} (patrz:\label{sec:obliczenia}).
-  Prawdopodobieństwo znalezienia w~przedziale wartości prawdziwej,
-  dla~dowolnego parametru~$k$, można otrzymać obliczając ją~samemu
-  na~podstawie tego rozkładu albo~odczytać z~odpowiednich
+  matematycznych rozkładu Gaussa\footnote{Tutaj parę rzeczy opisaliśmy
+    zbyt skrótowo. Może kiedyś napiszemy to lepiej.}
+  (zob.~\eqref{sec:obliczanie}). Prawdopodobieństwo znalezienia
+  w~przedziale wartości prawdziwej, dla~dowolnego parametru~$k$, można
+  otrzymać obliczając ją~samemu na~podstawie tego rozkładu
+  albo~odczytać z~odpowiednich
   \href{https://en.wikipedia.org/wiki/Standard_normal_table}{tablic}.
 \end{enumerate}
 
@@ -829,7 +868,7 @@ z~taką niepewnością.
   znajdziesz. Życzymy powodzenia~\smiley.
 \item Obiekty zamknięte w środowiskach float np.~wykresy
   w~\texttt{figure} i~tabele w~\texttt{table}, zostają umieszczone
-  podczas kompilacji tam gdzie ,,najlepiej'' wedłóg kompilatora
+  podczas kompilacji tam gdzie ,,najlepiej'' według kompilatora
   pasują. Można co prawda starać się to zmienić (metody są opisane
   np.~w~
   \href{https://en.wikibooks.org/wiki/LaTeX/Floats,\_Figures\_and\_Captions}{\emph{\LaTeX/Floats,
@@ -837,7 +876,8 @@ z~taką niepewnością.
   rozkładu tekstu. Nie należy~się bać tego, że~obrazek ląduje
   niedokładnie w~miejscu gdzie jest opisany w tekście, należy tylko
   dodać odpowiednie referencje tam gdzie~się do~niego odwołujemy.
-  \toadd{Czy trzeba ten fragment rozbudować?}
+
+  W~pewnych wypadkach, w~szczególności mniej istotnych wykresów, które mają tylko zilustrować ogólne zachowanie badanego zjawiska, dobrze jest umieścić rysunek zajmujący nie całą stronę, lecz
 \end{enumerate}
 
 
@@ -876,6 +916,7 @@ z~taką niepewnością.
   skompiluje~się. Autodopasowujące~się nawiasy albo występują parami,
   albo~jeden z~nich należy zastąpić przez ,,\texttt{\tbs left.}''
   (odpowiednio ,,\texttt{\tbs right.}'').
+
 \item \LaTeX{} sam zarządza odstępami w~trybie matematyczny, co czasem
   może prowadzić do~mało estetycznego zapisu. Na przykład napisanie
   ,,\texttt{\$a b\$}'' daje ,,$a b$'', zaś ,,\texttt{\$a, b\$}''
@@ -886,23 +927,29 @@ z~taką niepewnością.
   Tym sposobem ,,\texttt{\$a\, b\$}'' daje ,,$a\, b$'',
   zaś~,,\texttt{\$a\tbs , b\tbs : c\tbs ; d\$}'' prowadzi
   do~,,$a\, b\: c\; d$''.
+
 \item Obecnie standardem w~pracy z~trybem matematycznym \LaTeX a jest
   używanie pakietów od~American Mathematical Society, takich jak
   \texttt{amsmath}, \texttt{amsfonts}, \texttt{amssymb},
   \texttt{amscd}, czy~\texttt{amsthm}, my~również polecamy ich
   stosowanie.
 
-  W~przypadku jednak korzystania z~pakietów \texttt{amsmath}
+  Jeśli zdecydujemy~się na korzystanie z~nich to~wzory numerowane
+  wstawiamy otoczeniem \texttt{equation}, zaś nienumerowane
+  \texttt{equation*}. Więcej na ten temat w~następnym punkcie.
+
+\item Jak podaje wytyczna prawidłowego korzystania z~\LaTeX a
   \href{ftp://ftp.gust.org.pl/TeX/info/l2tabu/english/l2tabuen.pdf}{\emph{An~essential
       guide to~\LaTeX 2$_{ \varepsilon}$ usage}} (inaczej
-  \emph{l2tabu}), zaleca by wtedy nie używać otoczeń
-  \texttt{displaymath}, \texttt{eqnarray} i~\texttt{eqnarray*} bowiem
-  ich formatowanie nie jest spójne z~tym pakietem. Otoczenie
-  \texttt{eqnarray} należy zastąpić przez \texttt{align},
-  zaś~\texttt{eqnarray*} przez \texttt{align*}.
-  Natomiast~\texttt{displaymath} można zastąpić \texttt{\tbs [...\tbs
-    ]} lub~\texttt{equation*}\footnote{Tego ostatniego autorzy nie~są
-    do~końca pewni, ale~jest wygodne w~praktyce.}.
+  \emph{l2tabu}), jeśli używamy \texttt{amsmath} zaleca by~wtedy nie
+  używać otoczeń \texttt{displaymath}, \texttt{eqnarray}
+  i~\texttt{eqnarray*} bowiem ich formatowanie nie jest spójne
+  z~standardami tego pakietu pakietem. Otoczenie \texttt{displaymath}
+  należy zastąpić\footnote{Tego ostatniego autorzy nie~są do~końca
+    pewni, ale~jest wygodne w~praktyce.} przez \texttt{equation*}
+  lub~\texttt{\tbs [...\tbs ]}, \texttt{eqnarray} przez
+  \texttt{align}, zaś~\texttt{eqnarray*} przez \texttt{align*}.
+  
 \end{enumerate}
 
 
@@ -964,6 +1011,12 @@ czy~ta funkcja działa poprawnie.
   \begin{quote}
     \texttt{700 \tbs si\{ .m \}} $\longrightarrow 700 \si{ .m }$.
   \end{quote}
+  Wyjątek w~języku polskim\footnote{Czy istnieje coś w~języku polskim
+    od~czego nie ma wyjątków?} od~tej reguły stanową stopnie Celsiusa
+  i~Fahrenheita, które należy zapisać jednym cięgiem, czyli
+  ,,25\textcelsius'', nie zaś ,,$25\; ^{ \circ }\si{C}$''. Istnieje
+  formalne uzasadnienie tej reguły, ale~według nas wygląd przykładów jest
+  wystarczający.
 \end{enumerate}
 
 
@@ -1088,8 +1141,8 @@ standardami stronę \emph{\TeX{} Users Group},
     \texttt{\tbs newcommand\{\tbs powt\}}\verb+[1]{$t^{ #1 }$}+,
   \end{quote}
   definiuje komendę która po~wpisaniu w~tekście ,,\texttt{\tbs
-    powt\{3\}}'' (nie trzeba, a wręcz nie powinno się wchodzić do
-  trybu matematycznego) daje ,,\powt{3}''. Bardziej skomplikowany
+    powt\{3\}}'' (nie trzeba, a~wręcz nie powinno się wchodzić
+  do~trybu matematycznego) daje ,,\powt{3}''. Bardziej skomplikowany
   przykład~to:
   \begin{quote}
     \texttt{\tbs newcommand\{\tbs pd\}}\verb+[3]+\texttt{\{ \tbs
@@ -1136,6 +1189,25 @@ standardami stronę \emph{\TeX{} Users Group},
   %   czerwone''.
 \end{enumerate}
 
+
+
+
+
+% ############################
+\section{Różne porady na~temat estetyki kodu}
+\label{sec:bibliografia}
+
+\textbf{Ważne!!!} Bibliografia w~tym tekście nie został utworzona,
+za~pomocą opisanych tu~metod. Uznaliśmy, że~ponieważ każdą z~pozycji
+chcemy opatrzyć dłuższym lub~krótszym komentarzem, wygodniej będzie
+skorzystać z~środowiska \texttt{enumerate}.
+
+Do~tworzenia bibliografii w~\LaTeX u wykorzystuje~się dodatkowe
+narzędzia, dwa najpopularniejsze to Bib\TeX{} i~połączeni
+\texttt{biblatex + biber}. Pomimo, że~połączenie \texttt{biblatex +
+  biber} stanowi bardziej nowoczesne podejście, tutaj przedstawi tylko
+wykorzystanie Bib\TeX a, jako że~wydaje~się nam (wciąż) prostszy
+w~użytkowaniu.
 
 
 
@@ -1199,6 +1271,20 @@ standardami stronę \emph{\TeX{} Users Group},
 
 
 
+% ################################################
+\appendix  % Beginning of appendix's
+% ################################################
+
+
+
+% ############################
+\section{O~zaokrąglaniu}
+\label{sec:zaokrąglanie}
+
+\toadd{Tu trzeba coś napisać.}
+
+
+
 % ############################
 \section*{Bibliografia}
 
@@ -1206,26 +1292,41 @@ standardami stronę \emph{\TeX{} Users Group},
 \item Red. Andrzej Magiera,
   \href{http://www.1pf.if.uj.edu.pl/documents/5046939/5227638/skrypt.pdf}{\emph{I~Pracownia
       Fizyczna}}.
+
 \item Bogusław Kamys,
   \href{http://users.uj.edu.pl/\~ufkamys/BK/smop1N\_h.pdf}{\emph{Statystyczne
       Metody Opracowania Pomiarów~I}}.
+
 \item Siegmund Brandt, \emph{Metody statyczne i~obliczeniowe analizy
     danych}. \\
   Książka napisana często zbyt zwięźle, zawiera sporo relatywnie
   prostych wyprowadzeń wielu wzorów i~zależności, jako taką można ją
   polecić jako relatywnie prosty wykład podstaw statystyki. Albo jeśli
   potrzebujesz na~szybko coś znaleźć.
+
 \item Wojciech Niemiro, \href{https://www.mimuw.edu.pl/~pokar/StatystykaI/Literatura/NiemiroBook.pdf}{\emph{Statystyka~I}}. \\
   Niektórzy twierdza, że~to pozycja ,,from zero to hero''.
+
 \item Jarosław Bartoszewicz, \emph{Wykłady ze~statystyki matematycznej}. \\
   Pozycja już zaawansowana, otwierając ją bądź gotów na~to, że~jej
   studiowanie zajmie trochę czasu.
+
 \item \emph{Popularne
     błędy typograficzne, czyli jak unikać byków}. \\
   Adres:
   \href{http://artisan-studio.pl/popularne-bledy-typograficzne-czyli-jak-unikac-bykow}{http://artisan-studio.pl/popularne-bledy-typograficzne-czyli-jak-unikac-bykow}.
+\item Tobias Oetiker, Hubert Partl, Irene Hyna, Elisabeth Schlegl, Tomasz Przechlewski, Ryszard Kubiak i~Janusz Gołdasz, \href{http://www.ptep-online.com/ctan/lshort_polish.pdf}{\emph{Nie za~krótkie wprowadzenie do~systemu \LaTeX{} $2_{ \varepsilon }$}}. \\
+  W~tym tekście poruszyliśmy temat \LaTeX a tylko w~stopniu
+  minimalnym, tam gdzie wydało~się nam to~niezbędne/bardzo potrzebne.
+  Jeśli ktoś nie ma~wielkiej wiedzy na~jego temat, to~ta pozycja
+  stanowi rozsądne wprowadzenie, do~chyba nieograniczonych (jak~się
+  postarać można napisać tekst hieroglifami) możliwości graficznych
+  \LaTeX a. Nic~jednak nie zastąpi kolegi, który już umie~się nim
+  posługiwać i~pomoże go~uruchomić na~twoim komputerze.
+  
 \item \emph{\TeX{} Users Group},
-  \href{http://tug.org/}{http://tug.org/}.
+  \href{http://tug.org/}{http://tug.org/}. \\
+  Wielkie źródło na~temat typografii.
 \end{enumerate}
 
 
