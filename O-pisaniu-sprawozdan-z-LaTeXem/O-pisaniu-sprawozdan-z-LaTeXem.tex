@@ -43,11 +43,14 @@
 
 
 % ------------------------------
-% Często używane pakiety
+% Inne użyteczne pakiety
 % ------------------------------
 \usepackage{csquotes}  % Pozwala w prosty sposób wstawiać cytaty do tekstu.
 \usepackage{xcolor}  % Pozwala używać kolorowych czcionek (zapewne dużo
 % więcej, ale ja nie potrafię nic o tym powiedzieć).
+\usepackage{tikz}  % Pakiet do tworzenia grafiki wektorowej
+\usetikzlibrary{positioning, calc, decorations.markings}
+% Uaktywnia odpowiednie biblioteki TikZ
 
 
 
@@ -443,7 +446,7 @@ red.~Andrzeja Magiery
   pod kątem na~aparaturę pomiarową, przez co~systematycznie źle
   odczytuje wyniki\footnote{Zapewne błąd ten wynika z~pragnienia
     pewnych ciał do~pozostania w~spoczynku.}
-  
+
   O~ile opisany powyżej rodzaj błędów systematycznych jest łatwy
   do~zauważenia i~oszacowania, istnieją inne, znacznie trudniejsze
   do~wykrycia i~oszacowanie, przez co~są~dużo groźniejsze. Może~się
@@ -535,7 +538,7 @@ red.~Andrzeja Magiery
   wagę, tak~że zawyża ona o~stałą wartość wagę mierzonych próbek.
   W~takich niejasnych sytuacjach nie należy~się specjalnie przejmować
   pedantyczną klasyfikacją błędów.
-  
+
 \item W~pewnych sytuacjach jest szansa na~usunięcie błędów grubych.
   Weźmy poprzedni przykład ze~źle skalibrowaną wagą. Jeśli jest pewne,
   że~waga cały czas zawyżała wyniki o~stałą wartość, można ją odjąć od
@@ -790,7 +793,99 @@ z~taką niepewnością.
 
 
 % ############################
-\section{Pułapki \LaTeX a i~sposoby ich obejścia}
+\section{\LaTeX}
+
+
+% ##########
+\subsection{Różne informacje i~porady}
+
+\begin{enumerate}
+\item Istnieje wiele edytorów dedykowanych do~\LaTeX a, takich choćby
+  jak \TeX Maker, jednak można również używać go~online dzięki stronom
+  \href{https://www.overleaf.com/}{Overleaf}
+  i~\href{https://www.sharelatex.com/}{Share\LaTeX}\footnote{Obecnie
+    (2018 rok) obie te strony~się połączył~się w~jedną, wciąż jednak
+    zachowują swoją specyfikę i~pewną odrębność. Czas pokaże jak to
+    będzie wyglądać dalej.}. Jeśli zaczynasz swoją znajomość z~\LaTeX
+  em polecamy przyjrzeć~się tym edytorom internetowym.
+
+\item \LaTeX{} jest stworzoną przez
+  \href{https://en.wikipedia.org/wiki/Leslie_Lamport}{Lesliego
+    Lamporta} nakładką na~\TeX a, który z~kolei został stworzony przez
+  \href{https://en.wikipedia.org/wiki/Donald_Knuth}{Donalda
+    E.~Knutha}. Niektórzy wymawiają go ,,latech'' inni, zaś
+  ,,lateks'', jednak jako, że~sam Donald Knuth nie wie która
+  \href{https://www.youtube.com/watch?v=8HuwiBPLV3A}{wymowa jest
+    poprawna}, nie będziemy~się nad tym problemem rozwodzili, sami
+  preferujemy jednak pierwszy wariant.
+
+\item Możliwości \LaTeX a są~trudne do~pojęcia i~nawet po~latach pracy
+  potrafi on~zaskoczyć tym co~oferuje i~w~tych poradach tak naprawdę
+  tylko zahaczymy o~niego tam gdzie wydaje~się nam to~niezbędne/bardzo
+  potrzebne. Zachęcamy jednak do~wygoogolwanie tego co~może on~zrobić,
+  zaś~źródła do~nauki które uważamy za~dobre można znaleźć
+  w~bibliografii na~końcu tych porad.
+
+  Czemu bowiem nie spróbować pisać za~pomocą hieroglifów?
+
+\item Aspektem \LaTeX a o~którym według nas mówi~się za rzadko, jest
+  możliwość tworzenia w~nim rozbudowanej grafiki
+  wektorowej\footnote{W~temat tego czym jest grafika wektorowa, nie
+    będziemy tu~wchodzili.}. \LaTeX{} ma wbudowane w~siebie dość
+  ograniczone możliwości tworzenia takiej grafiki, dlatego warto~się
+  zapoznać~się pakietem\footnote{PNG = Portable Graphics Format.}
+  \texttt{PGF/TikZ} (często określanym po prostu jako \texttt{TikZ}),
+  przykład jego możliwości można zobaczyć na
+  rysunku~\eqref{fig:Przyklad} Ma~on ogromne możliwości, jednak jest
+  też wymaga wiele od~użytkownika i~często wymaga wejścia naprawdę
+  głęboko w~trzewia \LaTeX a.
+
+  Materiały na~temat pakietu TikZ można znaleźć w~bibliografii
+  na~końcu tych porad.
+\end{enumerate}
+
+\begin{figure}
+  \centering
+
+  \begin{tikzpicture}
+    \def\radius{4}
+
+    % Axes
+    \draw[help lines, black, ->] (0, 0) -- (1.15*\radius, 0);
+    \draw[help lines, black, ->] (0, 0) -- (0, 1.15*\radius);
+
+    \begin{scope}[very thick, decoration={
+        markings,
+        mark=at position 0.5 with {\arrow[line width=1.2pt]{>}}},
+      ]
+      \draw[postaction={decorate}] (0, 0) -- (\radius, 0);
+      \draw[postaction={decorate}] (\radius, 0) arc (0:90:\radius);
+      \draw[postaction={decorate}] (0, \radius) -- (0, 0);
+    \end{scope}
+
+    % The labels
+    \node at (0, -0.25){$0$};
+
+    \node at (4.6, -0.3){$\mathfrak{Re}\, z$}; \node at (-0.55,
+    4.6){$\mathfrak{Im}\, z$};
+
+    \node at (0.5*\radius, -0.5){$\gamma_{ 1 }$}; \node at (-0.4,
+    0.5*\radius){$\gamma_{ 2 }$}; \node at (3.2, 3){$\gamma_{ R }$};
+
+    \node at (4.2, 1){\Large $\Gamma$};
+  \end{tikzpicture}
+
+  \caption{Przykład grafiki wektorowej wykonanej za~pomocą pakietu
+    PGF/TikZ.}
+  \label{fig:Przyklad}
+\end{figure}
+
+
+
+
+
+% ##########
+\subsection{Pułapki \LaTeX a i~sposoby ich obejścia}
 \label{sec:pulapki}
 
 \begin{enumerate}
@@ -838,21 +933,21 @@ z~taką niepewnością.
   (,,\texttt{\tbs}''), a~kończą spacją lub~pierwszym znakiem
   niebędącym literą. \LaTeX{} nie traktuje~więc takiej spacji jako
   odstępu w~tekście, lecz polecenie zakończenia komendy. Skutkiem tego
-  \begin{quote}
+  \begin{displayquote}
     \texttt{Używaj \tbs LaTeX a z~uwagą.}
-  \end{quote}
+  \end{displayquote}
   daje pożądany tekst
-  \begin{quote}
+  \begin{displayquote}
     Używaj \LaTeX a z~uwagą.
-  \end{quote}
+  \end{displayquote}
   Jednak już
-  \begin{quote}
+  \begin{displayquote}
     \texttt{\tbs LaTeX to~potężne narzędzie.}
-  \end{quote}
+  \end{displayquote}
   daje
-  \begin{quote}
+  \begin{displayquote}
     \LaTeX to~potężne narzędzie.
-  \end{quote}
+  \end{displayquote}
   Aby uniknąć tego typu problemów należy komendy po~których ma~być
   odstęp kończyć \texttt{\{\}}. Przykładowo
   \begin{displayquote}
@@ -908,34 +1003,7 @@ z~taką niepewnością.
   (z~rozszerzeniami nazwy pliku takimi jak \texttt{.log},
   \texttt{.aux}, etc.). Następna kompilacja powinna już przejść
   pomyślnie.
-  
-\item Obiekty zamknięte w środowiskach float np.~wykresy
-  w~\texttt{figure} i~tabele w~\texttt{table}, zostają umieszczone
-  podczas kompilacji tam gdzie ,,najlepiej'' według kompilatora
-  pasują. Można co prawda starać się to zmienić (metody są opisane
-  np.~w~
-  \href{https://en.wikibooks.org/wiki/LaTeX/Floats,\_Figures\_and\_Captions}{\emph{\LaTeX/Floats,
-      Figures and~Captions}}), ale~zazwyczaj prowadzi to~do~kiepskiego
-  rozkładu tekstu. Nie należy~się bać tego, że~obrazek ląduje
-  niedokładnie w~miejscu gdzie jest opisany w tekście, należy tylko
-  dodać odpowiednie referencje tam gdzie~się do~niego odwołujemy.
 
-  W~pewnych wypadkach, w~szczególności mniej istotnych rysunków, jak
-  wykresy które mają tylko ilustrować ogólne zachowanie badanego
-  zjawiska, dobrze jest umieścić rysunek zajmujący nie całą szerokość
-  tekstu, lecz~jej połowę, w~taki sposób, aby tekst go~opływał. Można
-  to osiągnąć za~pomocą np.~otoczenia \texttt{wrapfigure}.
-
-\item \textbf{Punkt dodatkowy.} Choć można robić obliczenia w~Excelu,
-  zaś~rysunki robić w~programach takich jak Origin, jednak autorzy
-  uważają, że~lepiej jest do~tego użyć języka programowania w~którym
-  w~łatwy sposób można tworzyć wykresy i~grafiki. Ze~swojej strony
-  możemy polecić co~najmniej dwa takie języki:
-  \href{https://www.python.org/}{Python}
-  i~\href{https://julialang.org/}{Julia}.
-
-  Poza tym umiejętność programowania może przynieść wiele innych
-  korzyści, również poza pracownią.
 \end{enumerate}
 
 
@@ -943,7 +1011,7 @@ z~taką niepewnością.
 
 
 % ############################
-\section{Tryb matematyczny}
+\section{Tryb matematyczny \LaTeX a}
 \label{sec:trybmatematyczny}
 
 \begin{enumerate}
@@ -1009,7 +1077,7 @@ z~taką niepewnością.
     pewni, ale~jest wygodne w~praktyce.} przez \texttt{equation*}
   lub~\texttt{\tbs [...\tbs ]}, \texttt{eqnarray} przez
   \texttt{align}, zaś~\texttt{eqnarray*} przez \texttt{align*}.
-  
+
 \end{enumerate}
 
 
@@ -1173,6 +1241,41 @@ standardami stronę \emph{\TeX{} Users Group},
   niej\footnote{\href{https://pl.wikipedia.org/wiki/Pauza_(znak_typograficzny)}{Tu}
     można znaleźć więcej informacji na ten temat.}. Zapisuje się
   je~odpowiednio przez dwa lub trzy użycia znaku <<->>.''
+
+\item Obiekty zamknięte w środowiskach float np.~wykresy
+  w~\texttt{figure} i~tabele w~\texttt{table}, zostają umieszczone
+  podczas kompilacji tam gdzie ,,najlepiej'' według kompilatora
+  pasują. Można co prawda starać się to zmienić (metody są opisane
+  np.~w~
+  \href{https://en.wikibooks.org/wiki/LaTeX/Floats,\_Figures\_and\_Captions}{\emph{\LaTeX/Floats,
+      Figures and~Captions}}), ale~zazwyczaj prowadzi to~do~kiepskiego
+  rozkładu tekstu. Nie należy~się bać tego, że~obrazek ląduje
+  niedokładnie w~miejscu gdzie jest opisany w tekście, należy tylko
+  dodać odpowiednie referencje tam gdzie~się do~niego odwołujemy.
+
+  W~pewnych wypadkach, w~szczególności mniej istotnych rysunków, jak
+  wykresy które mają tylko ilustrować ogólne zachowanie badanego
+  zjawiska, dobrze jest umieścić rysunek zajmujący nie całą szerokość
+  tekstu, lecz~jej połowę, w~taki sposób, aby tekst go~opływał. Można
+  to osiągnąć za~pomocą np.~otoczenia \texttt{wrapfigure}.
+
+\item \textbf{Punkt dodatkowy.} Choć można robić obliczenia w~Excelu,
+  zaś~rysunki robić w~programach takich jak Origin, jednak autorzy
+  uważają, że~lepiej jest do~tego użyć języka programowania w~którym
+  w~łatwy sposób można tworzyć wykresy i~grafiki. Ze~swojej strony
+  możemy polecić co~najmniej dwa takie języki:
+  \href{https://www.python.org/}{Python}
+  i~\href{https://julialang.org/}{Julia}.
+
+  Poza tym umiejętność programowania może przynieść wiele innych
+  korzyści, również poza pracownią. Jak również sporo radości.
+
+  Wspomniany już pakiet \texttt{TikZ}, choć potężny, jest dość
+  skomplikowany w~użytkowaniu, do~tego w~tym zakresie w~jakim
+  go~poznaliśmy nie nadaje~się do robienia wykresów dużej ilości
+  danych, np.~naniesienia wyników 100 pomiarów. W~takich wypadkach
+  proponujemy użyć jednego z~powyższych języków, bądź Excela.
+
 \end{enumerate}
 
 
@@ -1257,13 +1360,15 @@ standardami stronę \emph{\TeX{} Users Group},
 
 
 % ############################
-\section{Różne porady na~temat estetyki kodu}
+\section{O~tworzeniu bibliografii}
 \label{sec:bibliografia}
 
-\textbf{Ważne!!!} Bibliografia w~tym tekście nie został utworzona,
-za~pomocą opisanych tu~metod. Uznaliśmy, że~ponieważ każdą z~pozycji
-chcemy opatrzyć dłuższym lub~krótszym komentarzem, wygodniej będzie
-skorzystać z~środowiska \texttt{enumerate}.
+\begin{displayquote}
+  \textbf{Ważne.} Bibliografia w~tym tekście nie został utworzona,
+  za~pomocą opisanych tu~metod. Uznaliśmy, że~ponieważ każdą z~pozycji
+  chcemy opatrzyć dłuższym lub~krótszym komentarzem, wygodniej będzie
+  skorzystać z~środowiska \texttt{enumerate}.
+\end{displayquote}
 
 Do~tworzenia bibliografii w~\LaTeX u wykorzystuje~się dodatkowe
 narzędzia, dwa najpopularniejsze to Bib\TeX{} i~połączeni
@@ -1371,21 +1476,12 @@ trzeba więc nic dodatkowo instalować.
   potrzebujesz na~szybko coś znaleźć.
 
 \item Wojciech Niemiro, \href{https://www.mimuw.edu.pl/~pokar/StatystykaI/Literatura/NiemiroBook.pdf}{\emph{Statystyka~I}}. \\
-  Niektórzy twierdza, że~to pozycja ,,from zero to hero''.
+  Niektórzy twierdzą, że~to pozycja ,,from zero to hero''.
 
 \item Jarosław Bartoszewicz, \emph{Wykłady ze~statystyki matematycznej}. \\
   Pozycja już zaawansowana, otwierając ją bądź gotów na~to, że~jej
   studiowanie zajmie trochę czasu.
 
-\item Tobias Oetiker, Hubert Partl, Irene Hyna, Elisabeth Schlegl, Tomasz Przechlewski, Ryszard Kubiak i~Janusz Gołdasz, \href{http://www.ptep-online.com/ctan/lshort_polish.pdf}{\emph{Nie za~krótkie wprowadzenie do~systemu \LaTeX{} $2_{ \varepsilon }$}}. \\
-  W~tym tekście poruszyliśmy temat \LaTeX a tylko w~stopniu
-  minimalnym, tam gdzie wydało~się nam to~niezbędne/bardzo potrzebne.
-  Jeśli ktoś nie ma~wielkiej wiedzy na~jego temat, to~ta pozycja
-  stanowi rozsądne wprowadzenie, do~chyba nieograniczonych (jak~się
-  postarać można napisać tekst hieroglifami) możliwości graficznych
-  \LaTeX a. Nic~jednak nie zastąpi kolegi, który już umie~się nim
-  posługiwać i~pomoże go~uruchomić na~twoim komputerze.
-  
 \item \emph{Popularne
     błędy typograficzne, czyli jak unikać byków}. \\
   Adres:
@@ -1399,7 +1495,7 @@ trzeba więc nic dodatkowo instalować.
 \item Ewa Repucho, Tomasz Bierkowski, \emph{Typografia dla~humanistów.
     O~złożonych problemach projektowania edycji naukowych}. \\
   Dzieło dostępne chyba tylko w~wersji papierowej.
-  
+
 \item \emph{\TeX{} Users Group},
   \href{http://tug.org/}{http://tug.org/}. \\
   Wielkie źródło na~temat poprawnego pisania.
@@ -1409,19 +1505,54 @@ trzeba więc nic dodatkowo instalować.
   \href{http://www.ptep-online.com/ctan/lshort_polish.pdf} {\emph{Nie
       za~krótkie wprowadzenie do~systemu \LaTeX{}
       $2_{ \varepsilon }$}}. \\
-  W~tym tekście poruszyliśmy temat \LaTeX a tylko w~stopniu
-  minimalnym, tam gdzie wydało~się nam to~niezbędne/bardzo potrzebne.
-  Jeśli ktoś nie ma~wielkiej wiedzy na~jego temat, to~ta pozycja
-  stanowi rozsądne wprowadzenie, do~chyba nieograniczonych (jak~się
-  postarać można napisać tekst hieroglifami) możliwości graficznych
-  \LaTeX a. Nic~jednak nie zastąpi kolegi, który już umie~się nim
-  posługiwać i~pomoże go~uruchomić na~twoim komputerze.
+  W~tym tekście poruszyliśmy temat \LaTeX a tylko musnęliśmy tylko
+  tam, gdzie wydało~się nam to~niezbędne/bardzo potrzebne. Jeśli ktoś
+  nie ma~wielkiej wiedzy na~jego temat, to~ta pozycja stanowi rozsądne
+  wprowadzenie, do~chyba nieograniczonych (jak~się postarać można
+  napisać tekst hieroglifami) możliwości graficznych \LaTeX a.
+  Nic~jednak nie zastąpi kolegi, który już umie~się nim posługiwać
+  i~pomoże go~uruchomić na~twoim komputerze.
 
-\item AndrzejM.Borzyszkowski, \emph{Bib\TeX{} --~narzędzie
+\item \href{https://www.overleaf.com/learn/latex/Tutorials}{\emph{Overleaf --~Tutorials}}. \\
+  Zbiór przystępnych tutoriali na~kilkadziesiąt różnych tematów
+  dotyczących~\LaTeX a, z~dużą ilością dobrych przykładów, które warto
+  poznać. Jednak na~dzień dzisiejszy (2018~r.) nie jest wolna
+  od~drobnych błędów.
+
+\item \href{https://en.wikibooks.org/wiki/LaTeX}{\LaTeX{} na~Wikibooks}. \\
+  Ogromne, obejmujące dziesiątki zagadnień, lecz wciąż nieskończone
+  źródło wiedzy na~temat \LaTeX a. Polecamy go~szczerze tym którzy
+  chcą pogłębić swoją wiedzę na~jego temat.
+
+\item Andrzej M.~Borzyszkowski, \emph{Bib\TeX{} --~narzędzie
     do~przygotowania bibliografii}. \\
-  Bardzo dobre wprowadzenie do Bib\TeX a. Adres
+  Bardzo dobre wprowadzenie do Bib\TeX a. Adres:
   \href{https://docplayer.pl/18612412-Bibtex-narzedzie-do-przygotowania-bibliografii.html}
   {https://docplayer.pl/18612412-Bibtex-narzedzie-do-przygotowania-bibliografii.html}.
+
+\item \href{https://www.overleaf.com/learn/latex/TikZ_package}{\emph{Overleaf --~TikZ package}}. \\
+  Oficjalna dokumentacja
+  \href{http://piotrkosoft.net/pub/mirrors/CTAN/graphics/pgf/base/doc/pgfmanual.pdf}{PGF/TikZ}
+  ma~obecnie ponad 1100 stron, co~pokazuje jak wielce rozbudowany
+  i~skomplikowany narzędziem on~jest. Powyższy tutorial jest
+  przystępny i~poparty wieloma dobrymi przykładami, dlatego
+  proponujemy od~niego zacząć. Potem można przejść do~dalszych
+  wymienionych w~tej bibliografii pozycji. Niemniej nawet
+  aby~zrozumieć podstawowe komendy TikZa, może okazać~się potrzebne
+doczytanie o~\href{https://pl.wikipedia.org/wiki/Krzywa_B\%C3\%A9ziera}{krzywych
+    B\'{e}ziera}.
+
+\item Jacques Cr\'{e}mer,
+  \href{http://cremeronline.com/LaTeX/minimaltikz.pdf}{\emph{A~very
+      minimal introduction to~TikZ}}.
+
+\item
+  \href{https://en.wikibooks.org/wiki/LaTeX/PGF/TikZ}{\LaTeX/PGF/TikZ
+    na~Wikibooks}.
+
+\item \href{http://www.texample.net/tikz/examples/}{\emph{TikZ and~PGF~examples}}. \\
+  Zbiór, często oszałamiających, przykładów grafiki wektorowej, jaką
+  można tworzyć w~\LaTeX u za~pomocą \texttt{PGF/TikZ}.
 \end{enumerate}
 
 
