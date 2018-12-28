@@ -840,7 +840,15 @@ z~taką niepewnością.
   też wymaga wiele od~użytkownika i~często wymaga wejścia naprawdę
   głęboko w~trzewia \LaTeX a.
 
-  Materiały na~temat pakietu TikZ można znaleźć w~bibliografii
+  Warto zauważyć, że~obecnie można często ominą potrzebę pisania
+  konkretnego kodu \text{PGF/TikZa}, zamiast tego można skorzystać
+  z~narzędzi takich jak internetowy edytor
+  \href{https://www.mathcha.io/}{Mathcha}, które udostępniają
+  narzędzia graficzne do~tworzenia rysunków, następnie zaś pozwalają
+  eksportować je do~odpowiednich polików, lub~wygenerować kod tworzący
+  takie rysunki w~\LaTeX u, .
+  
+  Materiały na~temat pakietu \texttt{PGF/TikZ} można znaleźć w~bibliografii
   na~końcu tych porad.
 \end{enumerate}
 
@@ -851,28 +859,35 @@ z~taką niepewnością.
     \def\radius{4}
 
     % Axes
-    \draw[help lines, black, ->] (0, 0) -- (1.15*\radius, 0);
-    \draw[help lines, black, ->] (0, 0) -- (0, 1.15*\radius);
+    \draw[help lines, black, ->] (0, 0) -- (1.22 * \radius, 0);
+    \draw[help lines, black, ->] (0, 0) -- (0, 1.15 * \radius);
 
     \begin{scope}[very thick, decoration={
         markings,
         mark=at position 0.5 with {\arrow[line width=1.2pt]{>}}},
       ]
-      \draw[postaction={decorate}] (0, 0) -- (\radius, 0);
-      \draw[postaction={decorate}] (\radius, 0) arc (0:90:\radius);
-      \draw[postaction={decorate}] (0, \radius) -- (0, 0);
+      \draw [postaction={decorate}] (0, 0) -- (\radius, 0); \draw
+      [postaction={decorate}] (\radius, 0) arc (0:90:\radius); \draw
+      [postaction={decorate}] (0, \radius) -- (0, 0);
     \end{scope}
 
     % The labels
-    \node at (0, -0.25){$0$};
+    \node at (0, -0.25) {$0$};
 
-    \node at (4.6, -0.3){$\mathfrak{Re}\, z$}; \node at (-0.55,
-    4.6){$\mathfrak{Im}\, z$};
+    \node at (1.22 * \radius, -0.3) {$\mathfrak{Re}\, z$};
 
-    \node at (0.5*\radius, -0.5){$\gamma_{ 1 }$}; \node at (-0.4,
-    0.5*\radius){$\gamma_{ 2 }$}; \node at (3.2, 3){$\gamma_{ R }$};
+    \node at (-0.61, 1.15 * \radius) {$i\, \mathfrak{Im}\, z$};
 
-    \node at (4.2, 1){\Large $\Gamma$};
+
+    \node at (4.2, 1) {\Large $\Gamma$};
+    
+    \node at (0.49 * \radius, -0.35) {$\gamma_{ 1 }$};
+
+    \node at (-0.4, 0.5 * \radius) {$\gamma_{ 2 }$};
+
+    \node at (3.2, 3) {$\gamma_{ R }$};
+
+    \node at (\radius, -0.25) {$R$};
   \end{tikzpicture}
 
   \caption{Przykład grafiki wektorowej wykonanej za~pomocą pakietu
@@ -1370,7 +1385,7 @@ standardami stronę \emph{\TeX{} Users Group},
   skorzystać z~środowiska \texttt{enumerate}.
 \end{displayquote}
 
-Do~tworzenia bibliografii w~\LaTeX u wykorzystuje~się dodatkowe
+\noi Do~tworzenia bibliografii w~\LaTeX u wykorzystuje~się dodatkowe
 narzędzia, dwa najpopularniejsze to Bib\TeX{} i~połączeni
 \texttt{biblatex + biber}. Pomimo, że~połączenie \texttt{biblatex +
   biber} stanowi bardziej nowoczesne podejście, tutaj przedstawi tylko
@@ -1469,42 +1484,50 @@ trzeba więc nic dodatkowo instalować.
       Metody Opracowania Pomiarów~I}}.
 
 \item Siegmund Brandt, \emph{Metody statyczne i~obliczeniowe analizy
-    danych}. \\
+    danych}.
+  
   Książka napisana często zbyt zwięźle, zawiera sporo relatywnie
   prostych wyprowadzeń wielu wzorów i~zależności, jako taką można ją
   polecić jako relatywnie prosty wykład podstaw statystyki. Albo jeśli
   potrzebujesz na~szybko coś znaleźć.
 
-\item Wojciech Niemiro, \href{https://www.mimuw.edu.pl/~pokar/StatystykaI/Literatura/NiemiroBook.pdf}{\emph{Statystyka~I}}. \\
+\item Wojciech Niemiro, \href{https://www.mimuw.edu.pl/~pokar/StatystykaI/Literatura/NiemiroBook.pdf}{\emph{Statystyka~I}}.
+  
   Niektórzy twierdzą, że~to pozycja ,,from zero to hero''.
 
-\item Jarosław Bartoszewicz, \emph{Wykłady ze~statystyki matematycznej}. \\
+\item Jarosław Bartoszewicz, \emph{Wykłady ze~statystyki matematycznej}.
+  
   Pozycja już zaawansowana, otwierając ją bądź gotów na~to, że~jej
   studiowanie zajmie trochę czasu.
 
 \item \emph{Popularne
-    błędy typograficzne, czyli jak unikać byków}. \\
+    błędy typograficzne, czyli jak unikać byków}.
+  
   Adres:
   \href{http://artisan-studio.pl/popularne-bledy-typograficzne-czyli-jak-unikac-bykow}{http://artisan-studio.pl/popularne-bledy-typograficzne-czyli-jak-unikac-bykow}.
 
 \item Andrzej Tomaszewski, \emph{Architektura książki. Dla wydawców,
     redaktorów, poligrafów, grafików, autorów, księgoznawców
-    i~bibliofilów}. \\
+    i~bibliofilów}.
+  
   Dzieło dostępne chyba tylko w~wersji papierowej.
 
 \item Ewa Repucho, Tomasz Bierkowski, \emph{Typografia dla~humanistów.
-    O~złożonych problemach projektowania edycji naukowych}. \\
+    O~złożonych problemach projektowania edycji naukowych}.
+  
   Dzieło dostępne chyba tylko w~wersji papierowej.
 
 \item \emph{\TeX{} Users Group},
-  \href{http://tug.org/}{http://tug.org/}. \\
-  Wielkie źródło na~temat poprawnego pisania.
+  \href{http://tug.org/}{http://tug.org/}.
+  
+  Wielkie źródło informacje na~temat tego jak poprawnie pisać.
 
 \item Tobias Oetiker, Hubert Partl, Irene Hyna, Elisabeth Schlegl,
   Tomasz Przechlewski, Ryszard Kubiak i~Janusz Gołdasz,
   \href{http://www.ptep-online.com/ctan/lshort_polish.pdf} {\emph{Nie
       za~krótkie wprowadzenie do~systemu \LaTeX{}
-      $2_{ \varepsilon }$}}. \\
+      $2_{ \varepsilon }$}}.
+  
   W~tym tekście poruszyliśmy temat \LaTeX a tylko musnęliśmy tylko
   tam, gdzie wydało~się nam to~niezbędne/bardzo potrzebne. Jeśli ktoś
   nie ma~wielkiej wiedzy na~jego temat, to~ta pozycja stanowi rozsądne
@@ -1513,44 +1536,59 @@ trzeba więc nic dodatkowo instalować.
   Nic~jednak nie zastąpi kolegi, który już umie~się nim posługiwać
   i~pomoże go~uruchomić na~twoim komputerze.
 
-\item \href{https://www.overleaf.com/learn/latex/Tutorials}{\emph{Overleaf --~Tutorials}}. \\
+\item \href{https://www.overleaf.com/learn/latex/Tutorials}{\emph{Overleaf
+      --~Tutorials}}.
+  
   Zbiór przystępnych tutoriali na~kilkadziesiąt różnych tematów
   dotyczących~\LaTeX a, z~dużą ilością dobrych przykładów, które warto
   poznać. Jednak na~dzień dzisiejszy (2018~r.) nie jest wolna
   od~drobnych błędów.
 
-\item \href{https://en.wikibooks.org/wiki/LaTeX}{\LaTeX{} na~Wikibooks}. \\
+\item \href{https://en.wikibooks.org/wiki/LaTeX}{\LaTeX{} na~Wikibooks}.
+  
   Ogromne, obejmujące dziesiątki zagadnień, lecz wciąż nieskończone
   źródło wiedzy na~temat \LaTeX a. Polecamy go~szczerze tym którzy
   chcą pogłębić swoją wiedzę na~jego temat.
 
 \item Andrzej M.~Borzyszkowski, \emph{Bib\TeX{} --~narzędzie
-    do~przygotowania bibliografii}. \\
+    do~przygotowania bibliografii}.
+  
   Bardzo dobre wprowadzenie do Bib\TeX a. Adres:
   \href{https://docplayer.pl/18612412-Bibtex-narzedzie-do-przygotowania-bibliografii.html}
   {https://docplayer.pl/18612412-Bibtex-narzedzie-do-przygotowania-bibliografii.html}.
 
-\item \href{https://www.overleaf.com/learn/latex/TikZ_package}{\emph{Overleaf --~TikZ package}}. \\
+\item \href{https://www.overleaf.com/learn/latex/TikZ_package}{\emph{Overleaf --~TikZ package}}.
+  
   Oficjalna dokumentacja
   \href{http://piotrkosoft.net/pub/mirrors/CTAN/graphics/pgf/base/doc/pgfmanual.pdf}{PGF/TikZ}
-  ma~obecnie ponad 1100 stron, co~pokazuje jak wielce rozbudowany
+  ma~obecnie ponad 1100 stron~(!), co~pokazuje jak wielce rozbudowany
   i~skomplikowany narzędziem on~jest. Powyższy tutorial jest
   przystępny i~poparty wieloma dobrymi przykładami, dlatego
   proponujemy od~niego zacząć. Potem można przejść do~dalszych
   wymienionych w~tej bibliografii pozycji. Niemniej nawet
   aby~zrozumieć podstawowe komendy TikZa, może okazać~się potrzebne
-doczytanie o~\href{https://pl.wikipedia.org/wiki/Krzywa_B\%C3\%A9ziera}{krzywych
+  doczytanie
+  o~\href{https://pl.wikipedia.org/wiki/Krzywa_B\%C3\%A9ziera}{krzywych
     B\'{e}ziera}.
 
+\item \emph{Mathcha --~Online Mathematics Editor}.
+
+  Adres: \href{https://www.mathcha.io/}{https://www.mathcha.io/}.
+  
 \item Jacques Cr\'{e}mer,
   \href{http://cremeronline.com/LaTeX/minimaltikz.pdf}{\emph{A~very
       minimal introduction to~TikZ}}.
+
+\item Łukasz Strąk,
+  \href{http://zaiio.ii.us.edu.pl/wp-content/uploads/2015/05/TikzPackage.pdf}{
+    \emph{Krótkie wprowadzenie do~pakietu TikZ}}.
 
 \item
   \href{https://en.wikibooks.org/wiki/LaTeX/PGF/TikZ}{\LaTeX/PGF/TikZ
     na~Wikibooks}.
 
-\item \href{http://www.texample.net/tikz/examples/}{\emph{TikZ and~PGF~examples}}. \\
+\item \href{http://www.texample.net/tikz/examples/}{\emph{TikZ and~PGF~examples}}.
+  
   Zbiór, często oszałamiających, przykładów grafiki wektorowej, jaką
   można tworzyć w~\LaTeX u za~pomocą \texttt{PGF/TikZ}.
 \end{enumerate}
