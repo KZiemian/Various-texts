@@ -107,9 +107,10 @@
   \begin{block}{Basics}
     \begin{itemize}
     \item Julia has started as project in 2009, first release 0.1 in
-      2012, version 1.0 8~August~2018. Current version (20 November
-      2018) 1.0.2.
-    \item It is free, open software project.
+      2012, version 1.0 8~August~2018. Current version (4
+      January~2019) 1.0.3.
+    \item It is free and open software (GitHub
+      \colorlink{https://github.com/JuliaLang/julia}).
     \item Created by Jeff Bezanson, Alan Edelman, Stefan Karpinski,
       and~Viral B.~Shah, most of them work at~MIT at~some stages~of
       their life.
@@ -118,8 +119,8 @@
     \item Today one~of main center~of development~of the~language
       is~Julia Lab at~MIT, with Alan Edelman as it current head.
     \item They co-founded Julia Computing \emph{to develop products
-        that make Julia easy to use, easy to~deploy and easy to
-        scale}.
+        that make Julia easy to~use, easy to~deploy and easy
+        to~scale}.
     \end{itemize}
   \end{block}
 
@@ -184,8 +185,6 @@
       1980s, 1970s, 1960s and~1950s. They were designed for very, very
       different computers, environments, to solve different problems
       and~at~different stage~of computer science development.
-    \item[--] If there is a~mistake in~MATLAB, you must live with that
-      and walk around it. In Julia you can correct it yourself.
     \end{itemize}
   \end{block}
   
@@ -210,6 +209,8 @@
 
   \begin{block}{Reasons to learn}
     \begin{itemize}
+    \item[--] If there is a~mistake in~MATLAB, you must live with that
+      and walk around it. In Julia you can correct it yourself.
     \item[--] You can write code closely to~Python way with~REPL
       (shell like thing) and~``scripting'' or~in~browser (like IPython
       Notebook).
@@ -324,7 +325,7 @@
     \end{figure}
 
     \textbf{Warning!} Python code use numpy libraries that is~written
-    52.9\% in C (state of GitHub repository at~23~November 2018).
+    52.8\% in C (state of GitHub repository at~4 January~2019).
   \end{block}
   
 \end{frame}
@@ -385,7 +386,7 @@
     All code in all languages used for creating this benchmarks
     is~available on~GitHub \colorhref{https://github.com/johnfgibson/julia-pde-benchmark}{johnfgibson/julia-pde-benchmark}. \\
     \textbf{Warning!} Python code use numpy libraries that is~written
-    52.9\% in C (state of GitHub repository at~23~November 2018).
+    52.8\% in C (state of GitHub repository at~4 January~2019).
   \end{block}
 
   % \begin{block}{Algorithm}
@@ -565,6 +566,86 @@
 
 
 
+% ##########
+\begin{frame}
+  \frametitle{Closing remarks}
+
+  \begin{block}{Quite good summary}
+    \emph{Julia is still not great when you want import some libraries
+      and use them. It~is great when you must write new library.}
+    Chris Rackauckas on~Julia Discourse.
+  \end{block}
+
+  \begin{block}{My reflections}
+    \begin{itemize}
+    \item Julia proved that it~can be~used to~make serious scientific
+      work in~various fields, including numerical computations
+      relevant to~field theory.
+    \item Pedagogical perspective. Learning and~using it~is comparable
+      to~Python (in my~opinion), which is~starting language for
+      computer scientists on~MIT and~at~the same time is~more deep
+      as~computer language and~have more computational power.
+    \item Have potential to~make money outside academic realm.
+    \end{itemize}
+  \end{block}
+
+\end{frame}
+% ##########
+
+
+
+
+
+% ##########
+\begin{frame}
+  \frametitle{Closing remarks}
+
+  \begin{block}{If you use it in your research}
+    They ask you for citing paper \textbf{Julia: A~Fresh Approach to
+      Numerical Computing}, Jeff Bezanson, Alan Edelman, Stefan
+    Karpinski and~Viral B.~Shah~(2017) SIAM Review, 59:~65--98.
+    doi:~10.1137/141000671,
+    url:~http://julialang.org/publications/julia-fresh-approach-BEKS.pdf,
+    \colorlink{https://julialang.org/publications/julia-fresh-approach-BEKS.pdf}.
+    And add you paper to the following list
+    https://julialang.org/publications/,
+    \colorlink{https://julialang.org/publications/}.
+  \end{block}
+
+  \begin{block}{I want to thank these people for help and discusions}
+    \begin{itemize}
+    \item Tamas Papp,
+    \item John F. Gibson,
+    \item Yakir Luc Gagnon,
+    \item Antoine Levitt,
+    \item Krzysztof Musiał.
+    \end{itemize}
+    With most of them I converse on Julia Discourse,
+    \colorlink{https://discourse.julialang.org/}.
+  \end{block}
+
+\end{frame}
+% ##########
+
+
+
+
+
+% ##########
+\begin{frame}
+
+  \begin{center}
+    \LARGE Thank you.
+  \end{center}
+
+\end{frame}
+% ##########
+
+
+
+
+
+
 
 % % ######################################
 % \section[]{Regularyzacja wymiarowa w~przestrzeni położeń}
@@ -675,84 +756,6 @@
 
 
 
-% ##########
-\begin{frame}
-  \frametitle{Closing remarks}
-
-  \begin{block}{Quite good summary}
-    \emph{Julia is still not great when you want import some libraries
-      and use them. It~is great when you must write new library.}
-    Chris Rackauckas on~Julia Discourse.
-  \end{block}
-
-  \begin{block}{My reflections}
-    \begin{itemize}
-    \item Julia proved that it~can be~used to~make serious scientific
-      work in~various fields, including numerical computations
-      relevant to~field theory.
-    \item Pedagogical perspective. Learning and~using it~is comparable
-      to~Python (in my~opinion), which is~starting language for
-      computer scientists on~MIT and~at~the same time is~more deep
-      as~computer language and~have more computational power.
-    \item Have potential to~make money outside academic realm.
-    \end{itemize}
-  \end{block}
-
-\end{frame}
-% ##########
-
-
-
-
-% ##########
-\begin{frame}
-  \frametitle{Closing remarks}
-
-  \begin{block}{If you use it in your research}
-    They ask you for citing paper \textbf{Julia: A~Fresh Approach to
-      Numerical Computing}, Jeff Bezanson, Alan Edelman, Stefan
-    Karpinski and~Viral B.~Shah~(2017) SIAM Review, 59:~65--98.
-    doi:~10.1137/141000671,
-    url:~http://julialang.org/publications/julia-fresh-approach-BEKS.pdf,
-    \colorlink{https://julialang.org/publications/julia-fresh-approach-BEKS.pdf}.
-    And add you paper to the following list
-    https://julialang.org/publications/,
-    \colorlink{https://julialang.org/publications/}.
-  \end{block}
-
-  \begin{block}{I want to thank these people for help and discusions}
-    \begin{itemize}
-    \item Tamas Papp,
-    \item John F. Gibson,
-    \item Yakir Luc Gagnon,
-    \item Antoine Levitt,
-    \item Krzysztof Musiał.
-    \end{itemize}
-    With most of them I converse on Julia Discourse,
-    \colorlink{https://discourse.julialang.org/}.
-  \end{block}
-
-\end{frame}
-% ##########
-
-
-
-
-
-% ##########
-\begin{frame}
-
-  \begin{center}
-    \LARGE Thank you.
-  \end{center}
-
-\end{frame}
-% ##########
-
-
-
-
-
 % ######################################
 \section[]{Bibliography and~resources}
 % ######################################
@@ -798,10 +801,14 @@
 
 % ##########
 \begin{frame}
-  \frametitle{Sources used to make this presentation}
+  \frametitle{Netography}
 
   \begin{block}{}
     \begin{itemize}
+    \item JuliaLang/julia -- Julia GitHub repository,
+      \colorlink{https://github.com/JuliaLang/julia}.
+    \item numpy/numpy -- numpy GitHub repository,
+      \colorlink{https://github.com/numpy/numpy}.
     \item John F.~Gibson, \emph{julia-pde-benchmark}, \\
       GitHub
       \colorhref{https://github.com/johnfgibson/julia-pde-benchmark}{johnfgibson/julia-pde-benchmark}.
@@ -989,8 +996,7 @@
 \begin{frame}
 
   \begin{center}
-    \LARGE
-    Additional information and topics
+    \LARGE Additional information and topics
   \end{center}
 
 \end{frame}
@@ -1040,27 +1046,28 @@
         \hline
         Language & Percent of code \\
         \hline
-        Julia & 68.2\% \\
+        Julia & 68.4\% \\
         \hline
-        C & 16.7\% \\
+        C & 16.6\% \\
         \hline
-        C++ & 10.1\% \\
+        C++ & 10.0\% \\
         \hline
         Scheme & 3.4\% \\
         \hline
         Makefile & 0.6\% \\
         \hline
-        LLVM & 0.3\% \\
+        Shell & 0.3\% \\
         \hline
         Other & 0.7\% \\
         \hline
       \end{tabular}
-      \caption{Numbers from GitHub JuliaLang/julia, 20~November~2018.}
+      \caption{Numbers from GitHub JuliaLang/julia, 4~January~2019.}
     \end{table}
   \end{block}
 
   \begin{block}{}
-    Scheme --~Lisp dialect from MIT, LLVM --~Low Level Virtual Machine.
+    Scheme --~Lisp dialect from
+    MIT.% , LLVM --~Low Level Virtual Machine.
   \end{block}
   
 \end{frame}
@@ -1072,7 +1079,7 @@
 
 % ##########
 \begin{frame}
-  \frametitle{Cxx.jl (broken in~1.x)}
+  \frametitle{Cxx.jl (probably still broken in~1.x)}
 
   \begin{block}{RELP for C++}
     \begin{figure}
@@ -1104,8 +1111,8 @@
   % \end{block}
 
   \begin{block}{Corollary}
-    One man write game in pure Julia (with some shell scripts, to
-    automatize building~up binaries) and put it on~Mac App Store,
+    One man write game in pure Julia (with some shell scripts,
+    to~automatize building~up binaries) and put it on~Mac App Store,
     to~show if~you want, you~can do it quite easily. Code of game is
     available on
     \colorhref{https://github.com/NHDaly/PaddleBattleJL}{here}.
