@@ -20,9 +20,9 @@
 % Podstawowe pakiety (niezwiązane z ustawieniami języka)
 % ----------------------------
 \usepackage{microtype}  % Twierdzi, że poprawi rozmiar odstępów w tekście.
-\usepackage{graphicx}  % Wprowadza bardzo potrzebne komendy do wstawiania
+% \usepackage{graphicx}  % Wprowadza bardzo potrzebne komendy do wstawiania
 % grafiki.
-\usepackage{verbatim}  % Poprawia otoczenie VERBATIME.
+% \usepackage{verbatim}  % Poprawia otoczenie VERBATIME.
 \usepackage{textcomp}  % Dodaje takie symbole jak stopnie Celsiusa,
 % wprowadzane bezpośrednio w tekście.
 \usepackage{vmargin}  % Pozwala na prostą kontrolę rozmiaru marginesów,
@@ -243,10 +243,10 @@
   ostateczny wynik eksperymentu.
 
 \item[--] Chcielibyśmy podziękować Karolowi Capale, Wojciechowi Dybie
-  i~Janowi Majorowi za~pomoc w~pisaniu tych porad, uzupełnienia
-  oraz~wskazane przez nich błędy i~zaproponowane poprawki. Jak również
-  Krzysztofowi Musiałowi, który przeczytał ówczesną wersję tekst
-  i~znalazł w~nim sporo błędów.
+  i~Janowi Majorowi za~pomoc w~pisaniu tych porad, uzupełnienie ich
+  treści oraz~wskazane przez nich błędy i~zaproponowane poprawki. Jak
+  również Piotrowi Buremu i Krzysztofowi Musiałowi, za~uważna lekturę
+  i~wskazanie wielu błędów.
 
   Szczególne podziękowania należą~się Markowi Kopciuchowi,
   za~poprawienie część tekstu dotyczącej różnych typów błędów,
@@ -365,16 +365,16 @@
   jeśli zaokrąglamy 21.5 to~zarówno do~22.0 jak i~21.0 mamy
   ,,odległość'' 0.5, jednak 22.0 jest liczbą parzystą, więc
   zaokrąglamy do~niej. Na tej samej zasadzie 22.5 również zaokrąglamy
-  do 22.0. Analogicznie robimy dla części dziesiętnej: 0.475
+  do~22.0. Analogicznie robimy dla części dziesiętnej: 0.475
   zaokrąglamy do~0.48, tak samo jak 0.485. Pewne wytłumaczenie tego
   można znaleźć w~dodatku~A do~tego pliku. \tb{Tylko, że muszę go
     najpierw napisać.}
 
-  O~tym, że~zaokrąglanie nie musi być rzeczą banalną, a~zadania
+  O~tym, że~zaokrąglanie nie musi być rzeczą banalną, a~zdania
   uczonych w~kwestii tego jak należy to robić~są podzielone, można~się
   przekonać czytając artykuł na~angielskiej
   \href{https://en.wikipedia.org/wiki/Rounding}{\emph{Wikipedii
-      --~Rounding}}. Metod tu~polecana nosi tam nazwę \emph{Round half
+      --~Rounding}}. Metoda tu~polecana nosi tam nazwę \emph{Round half
     to~even}.
 \end{enumerate}
 
@@ -508,19 +508,19 @@ red.~Andrzeja Magiery
   jest taki, że~z~jakiegoś powodu wykonaliśmy tylko jeden pomiar danej
   wielkości.
 
-  Wówczas postępujemy w~następujący sposób. Szukamy najmilejszego
+  Wówczas postępujemy w~następujący sposób. Szukamy najmniejszego
   przedziału jaki zawiera wszystkie wyniki, jaki jesteśmy przy użyciu
   dostępnych przyrządów zmierzyć i~oznaczmy jego długość $L$.
-  W~przykładzie z~linijkom długość ta~będzie równa jej najmniejszej
+  W~przykładzie z~linijką długość ta~będzie równa jej najmniejszej
   podziałce. W~przypadku jeśli wykonaliśmy tylko jeden pomiar, za~$L$
   należy przyjąć długość przedziału w~którym musiał znajdować~się
   prawdziwy wynik, aby~przyrząd wskazał otrzymaną wielkość.
   Przykładowo zmierzyliśmy wartość temperatury
-  $T = 10.0 ^{ \circ }\si{C}$, zaś aparatura pozwala mierzyć~ją
-  z~dokładnością do~$0.01^{ \circ }\si{C}$, więc prawdziwa temperatura
+  $T = 10.0$\textcelsius, zaś aparatura pozwala mierzyć~ją
+  z~dokładnością do~$0.1$\textcelsius, więc prawdziwa temperatura
   musi zawierać~się w~przedziale
-  $9.9^{ \circ }\si{C} - 10.1 ^{ \circ }\si{C}$. W~tym przypadku mamy
-  więc~$L = 0.2 ^{ \circ }\si{C}$.
+  $9.9$\textcelsius$ - 10.1$\textcelsius. W~tym przypadku mamy
+  więc~$L = 0.2$\textcelsius.
 
   W~obu tych sytuacjach całemu pomiarowi przypisujemy niepewność
   przypadkową
@@ -573,7 +573,7 @@ wybrać jeden z~tych wyników, będzie obliczyć ich średnią
 arytmetyczną:~93.5\textcelsius.
 
 Jest to~dość typowy problem: mamy pewną ilość pomiarów i~chcemy na~jej
-podstawie oszacować ile wynosi wartość prawdziwa. Funkcję która
+podstawie oszacować ile wynosi wartość prawdziwa. Funkcję, która
 pozwala nam wyliczyć to~oszacowanie nazywamy \emph{estymatorem},
 zaś~sam proces szukania takiej wartości \emph{estymacją}. Typowym
 sposobem szacowania prawdziwej wielkości na~podstawie $n$~pomiarów
@@ -638,7 +638,7 @@ prawdopodobieństwo jego uzyskania wyniesie około 95.5\%.
 
 Załóżmy, że~w~naszym pomiarze bierzemy pod uwagę tylko niepewności
 przypadkowe, więc jest on rozpisywany rozkładem Gaussa, i~wykonaliśmy
-$n$~pomiarów. Wówczas dobrym estymatorem (oszacowaniem) wartość
+$n$~pomiarów. Wówczas dobrym estymatorem (oszacowaniem) wartości
 występującej w~przyrodzie $x_{ \textrm{fiz} }$ jest średnia
 arytmetyczna tych pomiarów, oznaczać ją będziemy przez~$\overline{x}$.
 Jeśli~zaś chodzi o~estymator odchylenia standardowego $\sigma$,
@@ -650,7 +650,7 @@ to~musimy rozróżnić dwie wielkości.
   odchylenie standardowe rozumiemy taką wielkość
   $\sigma_{ \textrm{pom} }( x )$, że~$x_{ \textrm{fiz} }$ znajduje~się
   w~przedziale
-  $[ x_{ i } - \sigma_{ \textrm{pom} }( x ),\, x_{ i } - \sigma_{
+  $[ x_{ i } - \sigma_{ \textrm{pom} }( x ),\, x_{ i } + \sigma_{
     \textrm{pom} }( x ) ]$. Wielkość $\sigma_{ \textrm{pom} }$
   estymujemy na~podstawie znajomości wszystkich $n$~pomiarów za pomocą
   wzoru. Najpopularniejszy znany nam estymator tej wielkości to
@@ -698,7 +698,7 @@ uchodzi za wystarczającą, zwykle uważa~się, że~więcej niż~30
 lub~więcej niż~100. Jednak podczas zajęć laboratoryjnych często
 zupełnie wystarczy 10~wyników.
 
-\toadd{Wytłumaczeni o co chodzi z współczynnikami Student-Fishera.}
+\toadd{Wytłumaczenie o co chodzi z współczynnikami Student-Fishera.}
 Jeśli ma~się za małą ilość pomiarów, aby analiza była wartościowa,
 to~zawsze najlepszym rozwiązaniem jest wykonać ich~więcej. Jeśli
 jednak nie jest to możliwe, można skorzystać z~metody
@@ -712,7 +712,7 @@ jednak nie jest to możliwe, można skorzystać z~metody
 \subsection{Jak zapisać wynik pomiaru, czyli o~niebanalności rzeczy
   oczywistych}
 
-Ten fragment bazuje na~stronach 24--25 skrypt
+Ten fragment bazuje na~stronach 24--25 skryptu
 \href{http://users.uj.edu.pl/\~ufkamys/BK/smop1N\_h.pdf}{\emph{Statystyczne
     Metody Opracowań Pomiarów~I}}.
 
@@ -801,12 +801,8 @@ z~taką niepewnością.
 
 \begin{enumerate}
 \item Istnieje wiele edytorów dedykowanych do~\LaTeX a, takich choćby
-  jak \TeX Maker, jednak można również używać go~online dzięki stronom
-  \href{https://www.overleaf.com/}{Overleaf}
-  i~\href{https://www.sharelatex.com/}{Share\LaTeX}\footnote{Obecnie
-    (2018 rok) obie te strony~się połączył~się w~jedną, wciąż jednak
-    zachowują swoją specyfikę i~pewną odrębność. Czas pokaże jak to
-    będzie wyglądać dalej.}. Jeśli zaczynasz swoją znajomość z~\LaTeX
+  jak \TeX Maker, jednak można również używać go~online dzięki stronom takim jak
+  \href{https://www.overleaf.com/}{Overleaf}. Jeśli zaczynasz swoją znajomość z~\LaTeX
   em polecamy przyjrzeć~się tym edytorom internetowym.
 
 \item \LaTeX{} jest stworzoną przez
@@ -833,19 +829,19 @@ z~taką niepewnością.
   wektorowej\footnote{W~temat tego czym jest grafika wektorowa, nie
     będziemy tu~wchodzili.}. \LaTeX{} ma wbudowane w~siebie dość
   ograniczone możliwości tworzenia takiej grafiki, dlatego warto~się
-  zapoznać~się pakietem\footnote{PNG = Portable Graphics Format.}
+  zapoznać~się pakietem\footnote{PGF = Portable Graphics Format.}
   \texttt{PGF/TikZ} (często określanym po prostu jako \texttt{TikZ}),
   przykład jego możliwości można zobaczyć na
   rysunku~\eqref{fig:Przyklad} Ma~on ogromne możliwości, jednak jest
   też wymaga wiele od~użytkownika i~często wymaga wejścia naprawdę
   głęboko w~trzewia \LaTeX a.
 
-  Warto zauważyć, że~obecnie można często ominą potrzebę pisania
-  konkretnego kodu \text{PGF/TikZa}, zamiast tego można skorzystać
+  Warto zauważyć, że~obecnie można często ominąć potrzebę pisania
+  konkretnego kodu \texttt{PGF/TikZa}, zamiast tego można skorzystać
   z~narzędzi takich jak internetowy edytor
   \href{https://www.mathcha.io/}{Mathcha}, które udostępniają
   narzędzia graficzne do~tworzenia rysunków, następnie zaś pozwalają
-  eksportować je do~odpowiednich polików, lub~wygenerować kod tworzący
+  eksportować je do~odpowiednich plików, lub~wygenerować kod tworzący
   takie rysunki w~\LaTeX u, .
   
   Materiały na~temat pakietu \texttt{PGF/TikZ} można znaleźć w~bibliografii
@@ -876,7 +872,7 @@ z~taką niepewnością.
 
     \node at (1.22 * \radius, -0.3) {$\mathfrak{Re}\, z$};
 
-    \node at (-0.61, 1.15 * \radius) {$i\, \mathfrak{Im}\, z$};
+    \node at (-0.58, 1.15 * \radius) {$\mathfrak{Im}\, z$};
 
 
     \node at (4.2, 1) {\Large $\Gamma$};
@@ -1063,7 +1059,7 @@ z~taką niepewnością.
 \item \LaTeX{} sam zarządza odstępami w~trybie matematyczny, co czasem
   może prowadzić do~mało estetycznego zapisu. Na przykład napisanie
   ,,\texttt{\$a b\$}'' daje ,,$a b$'', zaś ,,\texttt{\$a, b\$}''
-  do~,,$a, b$''. Jeśli chce~się wstawić w~trybie matematycznym odstęp
+  da~,,$a, b$''. Jeśli chce~się wstawić w~trybie matematycznym odstęp
   można~się posłużyć komendami \texttt{\tbs ,}, \texttt{\tbs ;},
   \texttt{\tbs :}, \texttt{\tbs quad} i~\texttt{\tbs qquad}.
 
@@ -1077,7 +1073,7 @@ z~taką niepewnością.
   \texttt{amscd}, czy~\texttt{amsthm}, my~również polecamy ich
   stosowanie.
 
-  Jeśli zdecydujemy~się na korzystanie z~nich to~wzory numerowane
+  Jeśli zdecydujemy~się na korzystanie z~nich, to~wzory numerowane
   wstawiamy otoczeniem \texttt{equation}, zaś nienumerowane
   \texttt{equation*}. Więcej na ten temat w~następnym punkcie.
 
@@ -1157,7 +1153,7 @@ czy~ta funkcja działa poprawnie.
     \texttt{700 \tbs si\{ .m \}} $\longrightarrow 700 \si{ .m }$.
   \end{quote}
   Wyjątek w~języku polskim\footnote{Czy istnieje coś w~języku polskim
-    od~czego nie ma wyjątków?} od~tej reguły stanową stopnie Celsiusa
+    od~czego nie ma wyjątków?} od~tej reguły stanową stopnie Celsjusza
   i~Fahrenheita, które należy zapisać jednym cięgiem, czyli
   ,,25\textcelsius'', nie zaś ,,$25\; ^{ \circ }\si{C}$''. Istnieje
   formalne uzasadnienie tej reguły, ale~według nas wygląd przykładów jest
@@ -1245,7 +1241,7 @@ standardami stronę \emph{\TeX{} Users Group},
 \item Należy rozróżniać łącznik (,,-''), półpauzę (,,--'') i~pauzę
   (,,---''). Łącznik (,,-'') zapisywany jest przy użyciu jednego znaku
   ,,-'' i~służy, jak sama nazwa wskazuje do łączenia ze sobą wyrazów,
-  np.~czarno-biały, jedno- lub dwuelementowy, AK-47~itd. Półpauzę
+  np.~czarno-biały, jedno- lub dwuelementowy, AK-47~itd. Półpauza
   (,,--'') i~pauza (,,---'') służą do~rozdzielania od~siebie wyrażeń.
   W~przypadku sprawozdań mogą m.in.~służyć do rozdzielania nazwy
   obiektu od~jego definicji.
@@ -1386,9 +1382,9 @@ standardami stronę \emph{\TeX{} Users Group},
 \end{displayquote}
 
 \noi Do~tworzenia bibliografii w~\LaTeX u wykorzystuje~się dodatkowe
-narzędzia, dwa najpopularniejsze to Bib\TeX{} i~połączeni
+narzędzia, dwa najpopularniejsze to Bib\TeX{} i~połączenie
 \texttt{biblatex + biber}. Pomimo, że~połączenie \texttt{biblatex +
-  biber} stanowi bardziej nowoczesne podejście, tutaj przedstawi tylko
+  biber} stanowi bardziej nowoczesne podejście, tutaj przedstawimy tylko
 wykorzystanie Bib\TeX a, jako że~wydaje~się nam (wciąż) prostszy
 w~użytkowaniu. Jest też częścią każdej dystrybucji \LaTeX a, nie
 trzeba więc nic dodatkowo instalować.
@@ -1491,17 +1487,18 @@ trzeba więc nic dodatkowo instalować.
   polecić jako relatywnie prosty wykład podstaw statystyki. Albo jeśli
   potrzebujesz na~szybko coś znaleźć.
 
-\item Wojciech Niemiro, \href{https://www.mimuw.edu.pl/~pokar/StatystykaI/Literatura/NiemiroBook.pdf}{\emph{Statystyka~I}}.
+\item Wojciech Niemiro,
+  \href{https://www.mimuw.edu.pl/~pokar/StatystykaI/Literatura/NiemiroBook.pdf}{\emph{Statystyka~I}}.
   
   Niektórzy twierdzą, że~to pozycja ,,from zero to hero''.
 
-\item Jarosław Bartoszewicz, \emph{Wykłady ze~statystyki matematycznej}.
+\item Jarosław Bartoszewicz, \emph{Wykłady ze~statystyki
+    matematycznej}.
   
   Pozycja już zaawansowana, otwierając ją bądź gotów na~to, że~jej
   studiowanie zajmie trochę czasu.
 
-\item \emph{Popularne
-    błędy typograficzne, czyli jak unikać byków}.
+\item \emph{Popularne błędy typograficzne, czyli jak unikać byków}.
   
   Adres:
   \href{http://artisan-studio.pl/popularne-bledy-typograficzne-czyli-jak-unikac-bykow}{http://artisan-studio.pl/popularne-bledy-typograficzne-czyli-jak-unikac-bykow}.
@@ -1528,15 +1525,16 @@ trzeba więc nic dodatkowo instalować.
       za~krótkie wprowadzenie do~systemu \LaTeX{}
       $2_{ \varepsilon }$}}.
   
-  W~tym tekście poruszyliśmy temat \LaTeX a tylko musnęliśmy tylko
-  tam, gdzie wydało~się nam to~niezbędne/bardzo potrzebne. Jeśli ktoś
-  nie ma~wielkiej wiedzy na~jego temat, to~ta pozycja stanowi rozsądne
+  W~tym tekście poruszyliśmy temat \LaTeX a tylko tam, gdzie
+  wydało~się nam to~niezbędne/bardzo potrzebne. Jeśli ktoś nie
+  ma~wielkiej wiedzy na~jego temat, to~ta pozycja stanowi rozsądne
   wprowadzenie, do~chyba nieograniczonych (jak~się postarać można
   napisać tekst hieroglifami) możliwości graficznych \LaTeX a.
   Nic~jednak nie zastąpi kolegi, który już umie~się nim posługiwać
   i~pomoże go~uruchomić na~twoim komputerze.
 
-\item \href{https://www.overleaf.com/learn/latex/Tutorials}{\emph{Overleaf
+\item
+  \href{https://www.overleaf.com/learn/latex/Tutorials}{\emph{Overleaf
       --~Tutorials}}.
   
   Zbiór przystępnych tutoriali na~kilkadziesiąt różnych tematów
@@ -1544,7 +1542,8 @@ trzeba więc nic dodatkowo instalować.
   poznać. Jednak na~dzień dzisiejszy (2018~r.) nie jest wolna
   od~drobnych błędów.
 
-\item \href{https://en.wikibooks.org/wiki/LaTeX}{\LaTeX{} na~Wikibooks}.
+\item \href{https://en.wikibooks.org/wiki/LaTeX}{\LaTeX{}
+    na~Wikibooks}.
   
   Ogromne, obejmujące dziesiątki zagadnień, lecz wciąż nieskończone
   źródło wiedzy na~temat \LaTeX a. Polecamy go~szczerze tym którzy
@@ -1557,7 +1556,9 @@ trzeba więc nic dodatkowo instalować.
   \href{https://docplayer.pl/18612412-Bibtex-narzedzie-do-przygotowania-bibliografii.html}
   {https://docplayer.pl/18612412-Bibtex-narzedzie-do-przygotowania-bibliografii.html}.
 
-\item \href{https://www.overleaf.com/learn/latex/TikZ_package}{\emph{Overleaf --~TikZ package}}.
+\item
+  \href{https://www.overleaf.com/learn/latex/TikZ_package}{\emph{Overleaf
+      --~TikZ package}}.
   
   Oficjalna dokumentacja
   \href{http://piotrkosoft.net/pub/mirrors/CTAN/graphics/pgf/base/doc/pgfmanual.pdf}{PGF/TikZ}
