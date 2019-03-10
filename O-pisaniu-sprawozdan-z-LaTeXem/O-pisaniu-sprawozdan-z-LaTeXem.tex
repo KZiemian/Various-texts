@@ -1156,14 +1156,41 @@ czy~ta funkcja działa poprawnie.
   \begin{quote}
     \texttt{700 \tbs si\{ .m \}} $\longrightarrow 700 \si{ .m }$.
   \end{quote}
-  Wyjątek w~języku polskim\footnote{Czy istnieje coś w~języku polskim
-    od~czego nie ma wyjątków?} od~tej reguły stanową stopnie Celsjusza
-  i~Fahrenheita, które należy zapisać jednym cięgiem, czyli
-  ,,25\textcelsius'', nie zaś ,,$25\; ^{ \circ }\si{C}$''. Istnieje
-  formalne uzasadnienie tej reguły, ale~według nas wygląd przykładów jest
-  wystarczający.
+  Wyjątek w~języku polskim\footnote{Czy istnieje coś w~języku polskim,
+    od~czego nie ma wyjątków?} od~tej reguły stanową stopnie, minuty
+  i~sekundy kątowe oraz stopnie Celsjusza i~Fahrenheita, które należy
+  zapisać jednym cięgiem, czyli ,,25\textcelsius'', nie zaś ,,25{
+  }\textcelsius''. Istnieje formalne uzasadnienie tej reguły,
+  ale~według rzut oka na~ten przykład jest wystarczający.
+
+\item Pakiet \texttt{textcomp} posiada bardzo elegancką komendę
+  do~pisanie stopni bezpośrednio w~tekście \texttt{\tbs textcelsius},
+  która została użyta w~paragrafie powyżej. Należy zwrócić uwagę,
+  że~otrzymany za~jej pomocą symbol różni~się od~tego który
+  dostaje~się w trybie matematycznym\footnote{Nie jest to jedyna
+    metoda wpisywania stopni w~trybie matematyczny, ale wydaje~się
+    najczęściej stosowana.}.
+
+  \begin{quote}
+    \texttt{25 \tbs textcelsius} $\longrightarrow$ 25\textcelsius, \\
+    \texttt{\$25\^{}\{ \tbs circ \} \tbs textrm\{C\}\$}
+    $\longrightarrow 25^{ \circ } \textrm{C}$, \\
+    \texttt{\$25 \tbs textrm\{\tbs textcelsius\}\$} $\longrightarrow$
+    $25\textrm{\textcelsius}$.
+  \end{quote}
+
+  Jak pokazuje trzeci przykład powyżej, można używać komendy
+  \texttt{\tbs textcelsius} można używać w~trybie matematycznym.
+  Polecamy więc wybrać jedną ustalony sposób pisania stopni i~używać
+  go~konsekwentnej w~tekście i~trybie matematycznym.
+
 \end{enumerate}
 
+Więcej informacji na~temat tego jak poprawnie zapisywać wielkości
+wyrażone w~jednostkach fizycznych, można znaleźć w~punkcie
+\emph{Presentational conventions} na~stronie
+\href{https://www.technologyuk.net/physics/measurement-and-units/physical-quantities-and-si-units.shtml}{\emph{Physical
+    Quantities and~SI Units}}.
 
 
 
@@ -1507,6 +1534,16 @@ trzeba więc nic dodatkowo instalować.
   Adres:
   \href{http://artisan-studio.pl/popularne-bledy-typograficzne-czyli-jak-unikac-bykow}{http://artisan-studio.pl/popularne-bledy-typograficzne-czyli-jak-unikac-bykow}.
 
+\item TechnologyUK,
+  \href{https://www.technologyuk.net/physics/measurement-and-units/physical-quantities-and-si-units.shtml}{\emph{Physical
+      Quantities and~SI Units}}.
+
+  Niektóre Informacje na~temat definicji jednostek układu~SI oraz
+  wielkości stałych fizycznych~są na~dziś dzień nieaktualne (2019 r.),
+  mimo to~zebrane tu w~jedno miejsce informacje o~jednostkach
+  fizycznych i~tym jak zapisywać wielkości wymiarowe (punkt
+  \emph{Presentational conventions}), mogą~się bardzo przydać.
+
 \item Andrzej Tomaszewski, \emph{Architektura książki. Dla wydawców,
     redaktorów, poligrafów, grafików, autorów, księgoznawców
     i~bibliofilów}.
@@ -1600,7 +1637,7 @@ trzeba więc nic dodatkowo instalować.
 
 \item
   \href{https://www.overleaf.com/learn/latex/Lengths_in_LaTeX}{\emph{Overleaf:
-    Lengths in~\LaTeX}}.
+      Lengths in~\LaTeX}}.
 
   Informacje o~jednostkach długości używanych przez \LaTeX a.
 \end{enumerate}
